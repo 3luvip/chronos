@@ -412,7 +412,7 @@ where
             incoming.request_id,
             0,
             client_id,
-            "Thong tin dang nhap khong hop le",
+            "The login information is not valid",
             integrity_mode,
             &cfg.hmac_secret,
         )
@@ -444,7 +444,7 @@ where
             incoming.request_id,
             0,
             client_id,
-            "Thong tin tai khoan hoac mat khau khong chinh xac",
+            "The account information or password is incorrect.",
             integrity_mode,
             &cfg.hmac_secret,
         )
@@ -461,7 +461,7 @@ where
             incoming.request_id,
             0,
             client_id,
-            "Thong tin tai khoan hoac mat khau khong chinh xac",
+            "The account information or password is incorrect.",
             integrity_mode,
             &cfg.hmac_secret,
         )
@@ -497,7 +497,7 @@ where
             incoming.request_id,
             0,
             client_id,
-            &format!("Account nay thuoc may chu SV{}", account.server_login),
+            &format!("This account is associated with server SV{}", account.server_login),
             integrity_mode,
             &cfg.hmac_secret,
         )
@@ -514,7 +514,7 @@ where
                 incoming.request_id,
                 0,
                 client_id,
-                "Dang nhap that bai, vui long dang nhap lai!",
+                "Login failed. Please try again.",
                 integrity_mode,
                 &cfg.hmac_secret,
             )
@@ -531,7 +531,7 @@ where
             0,
             client_id,
             &format!(
-                "Vui long cho {} giay de dang nhap lai.",
+                "Please wait {} seconds before trying again.",
                 cfg.wait_login_secs - seconds_pass
             ),
             integrity_mode,
@@ -547,7 +547,7 @@ where
             incoming.request_id,
             0,
             client_id,
-            "Server dang duoc admin xu ly va kiem tra lai,vui long quay lai sau",
+            "The server is being processed and checked again, please try again later.",
             integrity_mode,
             &cfg.hmac_secret,
         )
@@ -557,7 +557,7 @@ where
             incoming.request_id,
             0,
             client_id,
-            "Server dang duoc admin xu ly va kiem tra lai,vui long quay lai sau",
+            "The server is being processed and checked again, please try again later.",
             integrity_mode,
             &cfg.hmac_secret,
         )
@@ -571,7 +571,7 @@ where
             incoming.request_id,
             0,
             client_id,
-            "Tai khoan da bi khoa do vi pham dieu khoan!",
+            "The account has been blocked due to violation of the terms of service!",
             integrity_mode,
             &cfg.hmac_secret,
         )
