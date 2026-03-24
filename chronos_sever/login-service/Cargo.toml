@@ -1,0 +1,17 @@
+[package]
+name = "login-service"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "signal", "io-util", "sync"] }
+tracing = "0.1"
+shared = { path = "../shared" }
+protocol = { path = "../protocol" }
+sqlx = { version = "0.8", features = ["mysql", "runtime-tokio-rustls"] }
+rand = "0.10"
+tokio-rustls = "0.26"
+rustls-pemfile = "2"
+hmac = "0.12"
+sha2 = "0.10"
+argon2 = "0.5"

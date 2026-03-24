@@ -1,0 +1,12 @@
+[package]
+name = "gateway"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal", "net", "io-util"] }
+tracing = "0.1"
+shared = { path = "../shared" }
+protocol = { path = "../protocol" }
+tokio-rustls = "0.26"
+rustls-pemfile = "2"
