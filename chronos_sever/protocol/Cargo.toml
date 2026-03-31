@@ -5,3 +5,5 @@ edition = "2024"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
+byteorder = {version = "1"}
+memmap2 = {version = "0.9"}

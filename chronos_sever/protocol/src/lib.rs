@@ -1,5 +1,20 @@
 pub mod codec;
+pub mod bin_format;
+pub mod bin_writer;
+pub mod bin_reader;
+pub mod wire;
 
+
+
+pub const OP_PLAYER_INPUT:   u16 = 0x2001;
+pub const OP_PLAYER_DELTA:   u16 = 0x2002;  // server → clients
+pub const OP_EQUIP_SYNC:     u16 = 0x2003;  // trang bị thay đổi
+pub const OP_SPAWN_PLAYER:   u16 = 0x2004;
+pub const OP_DESPAWN_PLAYER: u16 = 0x2005;
+pub const OP_ATTACK:         u16 = 0x2006;
+pub const OP_ATTACK_RESULT:  u16 = 0x2007;
+pub const OP_ZONE_CHANGE:    u16 = 0x2008;
+pub const OP_CHAT:           u16 = 0x2009;
 pub const PROTOCOL_VERSION: u16 = 2;
 pub const FRAME_MAGIC: u16      = 0x4E52;
 pub const FLAG_ENCRYPTED: u8    = 0x01;

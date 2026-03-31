@@ -1,3 +1,3 @@
 [workspace]
-members = ["protocol", "shared", "login-service", "gateway"]
+members = ["protocol", "shared", "login-service", "gateway", "game_server"]
 resolver = "2"
