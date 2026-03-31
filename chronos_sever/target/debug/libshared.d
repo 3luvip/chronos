@@ -1,0 +1,1 @@
+/home/chronos/Downloads/Nro/chronos_sever/target/debug/libshared.rlib: /home/chronos/Downloads/Nro/chronos_sever/shared/src/config.rs /home/chronos/Downloads/Nro/chronos_sever/shared/src/error.rs /home/chronos/Downloads/Nro/chronos_sever/shared/src/lib.rs /home/chronos/Downloads/Nro/chronos_sever/shared/src/logging.rs

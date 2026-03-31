@@ -1,6 +1,7 @@
+
 use byteorder::{LE, ReadBytesExt, WriteBytesExt};
 use std::io::{self, Read, Write};
-
+use half::f16;
 /// Flags bitfield — chỉ gửi field nào thực sự thay đổi
 pub mod DeltaFlags {
     pub const HAS_POS:   u8 = 0x01;

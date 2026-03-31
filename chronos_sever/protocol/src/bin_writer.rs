@@ -1,7 +1,7 @@
 use super::bin_format::*;
 use byteorder::{LE, WriteBytesExt};
 use std::collections::HashMap;
-use std::io::{Seek, SeekFrom, Write};
+use std::io::{self, Seek, SeekFrom, Write};
 
 pub struct EqpWriter<W: Write + Seek> {
     w:          W,

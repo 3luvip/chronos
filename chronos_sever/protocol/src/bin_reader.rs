@@ -78,10 +78,17 @@ impl EquipRegistry {
         None
     }
 
-    pub fn name_of(&self, sprite_id: u32, file_bytes: &[u8]) -> Option<&str> {
-        let rec   = self.get(sprite_id)?;
+    pub fn name_of<'a>(
+        &self,
+        sprite_id: u32,
+        file_bytes: &'a [u8],
+    ) -> Option<&'a str> {
+        let rec = self.get(sprite_id)?;
         let start = rec.name_offset as usize;
-        let end   = file_bytes[start..].iter().position(|&b| b == 0)? + start;
-        std::str::from_utf8(&file_bytes[start..end]).ok()
+
+        let slice = file_bytes.get(start..)?;
+        let end = slice.iter().position(|&b| b == 0)?;
+
+        std::str::from_utf8(&slice[..end]).ok()
     }
 }

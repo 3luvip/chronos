@@ -1,3 +1,10 @@
+// shared/src/config.rs
+// TLS = mã hóa kết nối
+// HMAC chống giả mạo packet
+// PSK key nội bộ giữa các service
+
+
+
 use serde::Deserialize;
 
 #[derive(Debug, Clone, Deserialize)]
@@ -24,6 +31,25 @@ pub struct LoginConfig {
 }
 
 impl LoginConfig {
+
+    pub fn validate(&self) -> anyhow::Result<()> {
+        if self.port == 0 {
+            anyhow::bail!("port cannot be 0");
+        }
+
+        if self.hmac_secret.is_empty() {
+            anyhow::bail!("HMAC_SECRET is required");
+        }
+
+        if self.tls_enabled {
+            if self.tls_cert_path.is_empty() || self.tls_key_path.is_empty() {
+                anyhow::bail!("TLS enabled but cert/key missing");
+            }
+        }
+
+        Ok(())
+    }
+
     pub fn from_env() -> Self {
         let _ = dotenvy::dotenv();
         let host = std::env::var("LOGIN_HOST").unwrap_or_else(|_| "0.0.0.0".to_string());
@@ -108,7 +134,7 @@ impl LoginConfig {
             }
             if let Some((k, v)) = line.split_once('=') {
                 let key = k.trim();
-                let val = v.trim();
+                let val = v.trim(); 
                 match key {
                     "server.host" => cfg.host = val.to_string(),
                     "server.port" => {
@@ -175,6 +201,7 @@ impl LoginConfig {
         format!("{}:{}", self.host, self.port)
     }
 
+
     pub fn database_url(&self) -> String {
         format!(
             "mysql://{}:{}@{}:{}/{}",
@@ -189,3 +216,5 @@ impl LoginConfig {
         )
     }
 }
+
+

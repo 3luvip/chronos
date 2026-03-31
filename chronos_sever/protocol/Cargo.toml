@@ -7,3 +7,4 @@ edition = "2024"
 serde = { version = "1", features = ["derive"] }
 byteorder = {version = "1"}
 memmap2 = {version = "0.9"}
+half ={ version = "2"}
