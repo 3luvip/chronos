@@ -11,9 +11,20 @@ config_version=5
 [application]
 
 config/name="chronos_client"
+run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
-run/main_scene="res://scenes/Main.tscn"
+boot_splash/minimum_display_time=1000
+
+[autoload]
+
+FontSystem="*uid://bsp4wgdd1lk07"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=640
+window/size/resizable=false
 
 [dotnet]
 

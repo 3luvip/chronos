@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://daf5pjq11ogru"]
+
+[ext_resource type="Script" uid="uid://l54ohwldpk36" path="res://scripts/LoginScreen.cs" id="1_myinc"]
+
+[node name="Node2D" type="Node2D" unique_id=422080055]
+script = ExtResource("1_myinc")
