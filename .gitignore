@@ -1,0 +1,7 @@
+# Rust build artifacts
+target/
+
+# Other common ignores (optional)
+Cargo.lock
+*.log
+.DS_Store
