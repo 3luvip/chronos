@@ -11,25 +11,31 @@ public static class Protocol
     public const ushort FrameMagic = 0x4E52;
     public const ushort Version    = 2;
 
-    // ── Opcodes ───────────────────────────────────────────────────────────
+    // ── Opcodes: Login service ────────────────────────────────────────────
     public const ushort OpLogin         = 0x1001;
     public const ushort OpLogout        = 0x1002;
     public const ushort OpServerMessage = 0x1004;
     public const ushort OpServerSync    = 0x1005;
-
-    /// <summary>
-    /// Heartbeat: client gửi định kỳ (mỗi 30s) để giữ session alive.
-    /// Server trả về server timestamp (i64 ms big-endian) trong payload.
-    /// Yêu cầu: session_id hợp lệ ở header + FLAG_INTEGRITY (khi dùng HMAC).
-    /// </summary>
     public const ushort OpHeartbeat     = 0x1006;
-
     public const ushort OpInternalAuth  = 0x2001;
+
+    // ── Opcodes: Game server ──────────────────────────────────────────────
+    public const ushort OpPlayerInput   = 0x2001;  // client → game server
+    public const ushort OpPlayerDelta   = 0x2002;  // server → clients (batch delta)
+    public const ushort OpEquipSync     = 0x2003;
+    public const ushort OpSpawnPlayer   = 0x2004;
+    public const ushort OpDespawnPlayer = 0x2005;
+    public const ushort OpAttack        = 0x2006;
+    public const ushort OpAttackResult  = 0x2007;
+    public const ushort OpZoneChange    = 0x2008;
+    public const ushort OpChat          = 0x2009;
 
     // ── Flags ─────────────────────────────────────────────────────────────
     public const byte FlagEncrypted = 0x01;
     public const byte FlagIntegrity = 0x02;
     public const byte FlagInternal  = 0x04;
+    /// Packet payload đã được AES-256-GCM seal (anti-cheat layer)
+    public const byte FlagEncryptedPayload = 0x08;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -39,6 +45,8 @@ public sealed class PacketWriter
     private readonly MemoryStream _ms = new();
 
     public void WriteByte(byte value) => _ms.WriteByte(value);
+
+    public void WriteBool(bool value) => _ms.WriteByte(value ? (byte)1 : (byte)0);
 
     public void WriteInt32(int value)
     {
@@ -85,7 +93,9 @@ public sealed class PacketReader
 
     public PacketReader(byte[] data) { _data = data; _pos = 0; }
 
-    public byte   ReadByte()   { Ensure(1); return _data[_pos++]; }
+    public byte ReadByte() { Ensure(1); return _data[_pos++]; }
+
+    public bool ReadBool() => ReadByte() != 0;
 
     public int ReadInt32()
     {

@@ -15,9 +15,9 @@ using System.Threading.Tasks;
 /// Tính năng:
 ///   • TLS (optional, SkipTlsCertValidation cho dev)
 ///   • HMAC-SHA256 integrity trên mỗi frame (optional)
-///   • LoginAsync / LogoutAsync / HeartbeatAsync
+///   • AES-256-GCM encryption cho game packets (optional)
+///   • LoginAsync / LogoutAsync / HeartbeatAsync / SendPlayerInputAsync
 ///   • SendHeartbeatLoopAsync: vòng lặp tự động gửi heartbeat mỗi 30 giây
-///     để giữ session alive (server timeout = 90 giây)
 /// </summary>
 public sealed class ChronosTcpClient : IDisposable
 {
@@ -30,15 +30,14 @@ public sealed class ChronosTcpClient : IDisposable
     // ── Session ───────────────────────────────────────────────────────────
     public ulong SessionId { get; private set; }
     public int   UserId    { get; private set; }
-
-    /// <summary>True nếu đã login thành công và chưa logout.</summary>
     public bool IsLoggedIn => SessionId != 0 && UserId != 0;
 
-    // ── HeartBeat ─────────────────────────────────────────────────────────
-    /// Interval (ms) giữa 2 heartbeat. Server timeout = 90s → dùng 30s.
-    private const int HeartbeatIntervalMs = 30_000;
+    // ── Anti-cheat: packet encryption (khởi tạo sau login) ───────────────
+    private PacketCrypto? _crypto;
+    private readonly Random _jitterRng = new();
 
-    // ─────────────────────────────────────────────────────────────────────
+    // ── HeartBeat ─────────────────────────────────────────────────────────
+    private const int HeartbeatIntervalMs = 30_000;
 
     public ChronosTcpClient(ClientOptions options)
     {
@@ -95,7 +94,6 @@ public sealed class ChronosTcpClient : IDisposable
         var frame  = BuildFrame(Protocol.OpLogin, reqId, 0, writer.ToArray());
         await WriteFrameAsync(frame, ct);
 
-        // Đọc phản hồi — server có thể gửi OP_SERVER_MESSAGE trước OP_LOGIN
         while (true)
         {
             var resp = await ReadFrameAsync(ct);
@@ -103,10 +101,9 @@ public sealed class ChronosTcpClient : IDisposable
             if (resp.Opcode == Protocol.OpServerMessage)
             {
                 var rd   = new PacketReader(resp.Payload);
-                _        = rd.ReadInt32();   // client_id echo
+                _        = rd.ReadInt32();
                 string m = rd.ReadUtf();
                 GD.Print($"[Client] Server message: {m}");
-                // Tiếp tục đọc để lấy OP_LOGIN result
                 continue;
             }
 
@@ -145,18 +142,47 @@ public sealed class ChronosTcpClient : IDisposable
 
             SessionId = resp.SessionId;
             UserId    = result.UserId;
+
+            // ── Khởi tạo PacketCrypto sau khi có session ──────────────────
+            if (_options.UsePacketEncryption && !string.IsNullOrEmpty(_options.EncryptionSecret))
+            {
+                _crypto?.Dispose();
+                // Derive per-session key: secret + sessionId
+                _crypto = new PacketCrypto($"{_options.EncryptionSecret}:{SessionId:X16}");
+                GD.Print("[Client] Packet encryption initialized.");
+            }
+
             return result;
         }
+    }
+
+    // ═════════════════════════════════════════════════════════════════════
+    // Player Input (game packet)
+    // ═════════════════════════════════════════════════════════════════════
+
+    /// Gửi OP_PLAYER_INPUT với optional AES encryption.
+    public async Task SendPlayerInputAsync(byte[] payload, CancellationToken ct)
+    {
+        EnsureConnected();
+        if (!IsLoggedIn) return;
+
+        byte[] finalPayload = payload;
+
+        // Encrypt nếu crypto đã init
+        if (_crypto is not null)
+        {
+            finalPayload = _crypto.Seal(Protocol.OpPlayerInput, SessionId, payload);
+        }
+
+        uint reqId = _requestId++;
+        var frame  = BuildFrame(Protocol.OpPlayerInput, reqId, SessionId, finalPayload);
+        await WriteFrameAsync(frame, ct);
     }
 
     // ═════════════════════════════════════════════════════════════════════
     // Heartbeat
     // ═════════════════════════════════════════════════════════════════════
 
-    /// <summary>
-    /// Gửi một OP_HEARTBEAT và đọc response của server.
-    /// Trả về server timestamp (ms) — dùng để kiểm tra clock drift nếu cần.
-    /// </summary>
     public async Task<long> HeartbeatAsync(CancellationToken ct)
     {
         EnsureConnected();
@@ -164,11 +190,9 @@ public sealed class ChronosTcpClient : IDisposable
             throw new InvalidOperationException("Cannot send heartbeat: not logged in.");
 
         uint reqId = _requestId++;
-        // Payload trống; session_id ở header frame là đủ để server xác thực
         var frame  = BuildFrame(Protocol.OpHeartbeat, reqId, SessionId, Array.Empty<byte>());
         await WriteFrameAsync(frame, ct);
 
-        // Đọc response
         while (true)
         {
             var resp = await ReadFrameAsync(ct);
@@ -182,11 +206,6 @@ public sealed class ChronosTcpClient : IDisposable
         }
     }
 
-    /// <summary>
-    /// Vòng lặp tự động gửi heartbeat mỗi <see cref="HeartbeatIntervalMs"/> ms.
-    /// Gọi hàm này sau khi login thành công và truyền CancellationToken của session.
-    /// Hàm này sẽ tự dừng khi token bị cancel hoặc khi gặp lỗi (disconnect).
-    /// </summary>
     public async Task SendHeartbeatLoopAsync(CancellationToken ct)
     {
         while (!ct.IsCancellationRequested && IsLoggedIn)
@@ -198,16 +217,13 @@ public sealed class ChronosTcpClient : IDisposable
 
                 long serverTs = await HeartbeatAsync(ct);
                 long drift    = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - serverTs;
-                GD.Print($"[Client] Heartbeat OK. Server ts={serverTs}, drift={drift}ms");
+                GD.Print($"[Client] Heartbeat OK. drift={drift}ms");
             }
-            catch (OperationCanceledException)
-            {
-                break;
-            }
+            catch (OperationCanceledException) { break; }
             catch (Exception ex)
             {
                 GD.PrintErr($"[Client] Heartbeat error: {ex.Message}");
-                break;   // Ngừng loop — LoginScreen sẽ xử lý disconnect
+                break;
             }
         }
     }
@@ -227,9 +243,10 @@ public sealed class ChronosTcpClient : IDisposable
         var frame = BuildFrame(Protocol.OpLogout, _requestId++, SessionId, writer.ToArray());
         await WriteFrameAsync(frame, ct);
 
-        // Server không trả ACK cho OP_LOGOUT
         SessionId = 0;
         UserId    = 0;
+        _crypto?.Dispose();
+        _crypto = null;
     }
 
     // ═════════════════════════════════════════════════════════════════════
@@ -263,7 +280,7 @@ public sealed class ChronosTcpClient : IDisposable
         BinaryPrimitives.WriteUInt16BigEndian(header.AsSpan(2,  2), Protocol.Version);
         BinaryPrimitives.WriteUInt16BigEndian(header.AsSpan(4,  2), frame.Opcode);
         header[6] = frame.Flags;
-        header[7] = 0; // reserved
+        header[7] = 0;
         BinaryPrimitives.WriteUInt32BigEndian(header.AsSpan(8,  4), (uint)frame.Payload.Length);
         BinaryPrimitives.WriteUInt32BigEndian(header.AsSpan(12, 4), frame.RequestId);
         BinaryPrimitives.WriteUInt64BigEndian(header.AsSpan(16, 8), frame.SessionId);
@@ -292,10 +309,9 @@ public sealed class ChronosTcpClient : IDisposable
         ushort opcode    = BinaryPrimitives.ReadUInt16BigEndian(header.AsSpan(4, 2));
         byte   flags     = header[6];
         byte   reserved  = header[7];
-        if (reserved != 0)
-            throw new InvalidDataException("Reserved byte must be zero");
+        if (reserved != 0) throw new InvalidDataException("Reserved byte must be zero");
 
-        uint   payloadLen = BinaryPrimitives.ReadUInt32BigEndian(header.AsSpan(8, 4));
+        uint   payloadLen = BinaryPrimitives.ReadUInt32BigEndian(header.AsSpan(8,  4));
         uint   requestId  = BinaryPrimitives.ReadUInt32BigEndian(header.AsSpan(12, 4));
         ulong  sessionId  = BinaryPrimitives.ReadUInt64BigEndian(header.AsSpan(16, 8));
 
@@ -320,20 +336,19 @@ public sealed class ChronosTcpClient : IDisposable
 
     private static async Task<byte[]> ReadExactAsync(Stream stream, int size, CancellationToken ct)
     {
-        byte[] buf    = new byte[size];
-        int    offset = 0;
+        byte[] buf = new byte[size];
+        int offset = 0;
         while (offset < size)
         {
             int read = await stream.ReadAsync(buf.AsMemory(offset, size - offset), ct);
-            if (read <= 0)
-                throw new IOException("Connection closed while reading frame");
+            if (read <= 0) throw new IOException("Connection closed while reading frame");
             offset += read;
         }
         return buf;
     }
 
     // ═════════════════════════════════════════════════════════════════════
-    // HMAC helpers
+    // HMAC
     // ═════════════════════════════════════════════════════════════════════
 
     private Frame WithHmac(Frame frame)
@@ -343,7 +358,7 @@ public sealed class ChronosTcpClient : IDisposable
 
         byte[] tag     = ComputeHmac(frame, frame.Payload, _options.HmacSecret);
         byte[] payload = new byte[frame.Payload.Length + tag.Length];
-        Buffer.BlockCopy(frame.Payload, 0, payload, 0,                  frame.Payload.Length);
+        Buffer.BlockCopy(frame.Payload, 0, payload, 0,                   frame.Payload.Length);
         Buffer.BlockCopy(tag,           0, payload, frame.Payload.Length, tag.Length);
 
         return new Frame
@@ -405,11 +420,18 @@ public sealed class ChronosTcpClient : IDisposable
 
     public void Dispose()
     {
-        try { _stream?.Dispose(); _tcp?.Close(); }
+        try
+        {
+            _crypto?.Dispose();
+            _stream?.Dispose();
+            _tcp?.Close();
+        }
         catch (Exception e) { GD.PrintErr($"[Client] Dispose error: {e.Message}"); }
     }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// ClientOptions — thêm UsePacketEncryption
 // ─────────────────────────────────────────────────────────────────────────────
 
 public sealed class ClientOptions
@@ -418,6 +440,12 @@ public sealed class ClientOptions
     public bool   SkipTlsCertValidation { get; init; } = true;
     public bool   UseHmac               { get; init; }
     public string HmacSecret            { get; init; } = "";
+
+    // ── Anti-cheat options ─────────────────────────────────────────────
+    /// Bật AES-256-GCM encryption cho game packets (OP_PLAYER_INPUT, v.v.)
+    public bool   UsePacketEncryption   { get; init; } = false;
+    /// Secret dùng để derive per-session AES key
+    public string EncryptionSecret      { get; init; } = "";
 }
 
 public sealed class LoginResult
