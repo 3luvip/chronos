@@ -1,9 +1,0 @@
-/home/chronos/Downloads/Nro/chronos_sever/target/debug/deps/game_server-6f3edc0f1b66880d.d: game_server/src/lib.rs game_server/src/player.rs game_server/src/validation.rs game_server/src/world_tick.rs game_server/src/anti_cheat.rs
-
-/home/chronos/Downloads/Nro/chronos_sever/target/debug/deps/libgame_server-6f3edc0f1b66880d.rmeta: game_server/src/lib.rs game_server/src/player.rs game_server/src/validation.rs game_server/src/world_tick.rs game_server/src/anti_cheat.rs
-
-game_server/src/lib.rs:
-game_server/src/player.rs:
-game_server/src/validation.rs:
-game_server/src/world_tick.rs:
-game_server/src/anti_cheat.rs:
