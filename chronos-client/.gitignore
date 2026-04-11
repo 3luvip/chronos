@@ -1,3 +1,25 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+# Ignore asset folders
+assets/
+bg/
+icon/
+t/
+
+# Ignore large media
+*.png
+*.jpg
+*.jpeg
+*.psd
+*.mp4
+*.zip
+
+# Godot
+.import/
+.export/
+
+# Build folders
+bin/
+obj/
+dist/
