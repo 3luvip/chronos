@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uXA0YzmPBss=",
+  "success": true,
+  "projectFilePath": "/home/chronos/Downloads/Nro/ChronosCore/ChronosCore.csproj",
+  "expectedPackageFiles": [
+    "/home/chronos/.nuget/packages/microsoft.codeanalysis.netanalyzers/8.0.0/microsoft.codeanalysis.netanalyzers.8.0.0.nupkg.sha512",
+    "/home/chronos/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>Chronos.Core</RootNamespace>
+    <AssemblyName>ChronosCore</AssemblyName>
+  </PropertyGroup>
+  <!-- KHÔNG có GodotSharp hay Godot.NET.Sdk — vi phạm sẽ fail build -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers"
+                      Version="8.*" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+/home/chronos/Downloads/Nro/ChronosCore/bin/Release/net8.0/ChronosCore.deps.json
+/home/chronos/Downloads/Nro/ChronosCore/bin/Release/net8.0/ChronosCore.dll
+/home/chronos/Downloads/Nro/ChronosCore/bin/Release/net8.0/ChronosCore.pdb
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ChronosCore.GeneratedMSBuildEditorConfig.editorconfig
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ChronosCore.AssemblyInfoInputs.cache
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ChronosCore.AssemblyInfo.cs
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ChronosCore.csproj.CoreCompileInputs.cache
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ChronosCore.sourcelink.json
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ChronosCore.dll
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/refint/ChronosCore.dll
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ChronosCore.pdb
+/home/chronos/Downloads/Nro/ChronosCore/obj/Release/net8.0/ref/ChronosCore.dll
