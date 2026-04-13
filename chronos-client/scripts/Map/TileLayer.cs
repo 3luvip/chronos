@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 
 namespace Map
@@ -57,19 +58,19 @@ namespace Map
         {
             int typeFlags = _map.TileTypeAt(tileX, tileY);
 
-            if ((typeFlags & TileMapData.TYPE_OUTSIDE) != 0) return;
+            if ((typeFlags & TileMapData.TypeOutside) != 0) return;
 
             int frameIndex = _map.TileFrameAt(tileX, tileY);
-            int screenX    = tileX * TileMapData.TILE_SIZE - camera.PositionX;
-            int screenY    = tileY * TileMapData.TILE_SIZE - camera.PositionY;
+            int screenX    = tileX * TileMapData.TileSize - camera.PositionX;
+            int screenY    = tileY * TileMapData.TileSize - camera.PositionY;
 
-            if ((typeFlags & TileMapData.TYPE_WATERFALL) != 0)
+            if ((typeFlags & TileMapData.TypeWaterfall) != 0)
             {
                 DrawWaterfallTile(canvas, screenX, screenY);
                 return;
             }
 
-            if ((typeFlags & TileMapData.TYPE_TOP_FALL) != 0)
+            if ((typeFlags & TileMapData.TypeTopFall) != 0)
             {
                 DrawTopWaterfallTile(canvas, screenX, screenY);
                 return;
@@ -79,13 +80,13 @@ namespace Map
             if (_map.TileSetId == 13 && frameIndex >= 0) return;
             if (frameIndex < 0) return;
 
-            if ((typeFlags & TileMapData.TYPE_TREE) != 0)
+            if ((typeFlags & TileMapData.TypeTree) != 0)
             {
                 DrawTreeParallaxTile(canvas, camera, tileSheet, frameIndex, tileX, tileY);
                 return;
             }
 
-            if ((typeFlags & TileMapData.TYPE_DOWN_1_PIXEL) != 0)
+            if ((typeFlags & TileMapData.TypeDown1Pixel) != 0)
             {
                 DrawSlopeTile(canvas, tileSheet, frameIndex, screenX, screenY);
                 return;
@@ -103,14 +104,14 @@ namespace Map
             int cameraY = camera.PositionY;
 
             // Left border — visible when camera is near the left edge
-            if (cameraX < TileMapData.TILE_SIZE)
+            if (cameraX < TileMapData.TileSize)
             {
                 for (int tileY = camera.CullTileStartY; tileY < camera.CullTileEndY; tileY++)
                 {
                     int frameIndex = _map.TileFrameAt(1, tileY);
                     if (frameIndex < 0) continue;
                     DrawNormalTile(canvas, tileSheet, frameIndex,
-                                   -cameraX, tileY * TileMapData.TILE_SIZE - cameraY);
+                                   -cameraX, tileY * TileMapData.TileSize - cameraY);
                 }
             }
 
@@ -123,8 +124,8 @@ namespace Map
                     int frameIndex = _map.TileFrameAt(rightColumnTileX, tileY);
                     if (frameIndex < 0) continue;
                     DrawNormalTile(canvas, tileSheet, frameIndex,
-                                   (_map.TileWidth - 1) * TileMapData.TILE_SIZE - cameraX,
-                                   tileY * TileMapData.TILE_SIZE - cameraY);
+                                   (_map.TileWidth - 1) * TileMapData.TileSize - cameraX,
+                                   tileY * TileMapData.TileSize - cameraY);
                 }
             }
         }
@@ -149,12 +150,12 @@ namespace Map
                                           TileSheetInfo? tileSheet, int frameIndex,
                                           int tileX, int tileY)
         {
-            int worldX     = tileX * TileMapData.TILE_SIZE;
+            int worldX     = tileX * TileMapData.TileSize;
             int baseScreenX = worldX - camera.PositionX;
             int deltaFromCenter = baseScreenX - camera.ViewportWidth / 2;
-            int parallaxOffset  = (TileMapData.TILE_SIZE - 2) * deltaFromCenter / TileMapData.TILE_SIZE;
+            int parallaxOffset  = (TileMapData.TileSize - 2) * deltaFromCenter / TileMapData.TileSize;
             int parallaxScreenX = parallaxOffset + camera.ViewportWidth / 2;
-            int screenY        = tileY * TileMapData.TILE_SIZE - camera.PositionY;
+            int screenY        = tileY * TileMapData.TileSize - camera.PositionY;
 
             DrawNormalTile(canvas, tileSheet, frameIndex, parallaxScreenX, screenY);
         }
@@ -162,7 +163,7 @@ namespace Map
         private void DrawSlopeTile(CanvasItem canvas, TileSheetInfo? tileSheet,
                                    int frameIndex, int screenX, int screenY)
         {
-            int tileSize = TileMapData.TILE_SIZE;
+            int tileSize = TileMapData.TileSize;
             if (tileSheet.HasValue)
             {
                 // Draw a 1-pixel cap at the top, then the full tile below it

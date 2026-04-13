@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 
 namespace Map
@@ -7,7 +8,7 @@ namespace Map
     {
         Waterfall,
         TopWaterfall,
-        Waterflow,
+        Waterflow, 
         WaterflowVariantN,
         WaterflowVariantN2
     }

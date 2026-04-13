@@ -1,6 +1,6 @@
-using Godot;
 using System;
 using System.Buffers.Binary;
+using Chronos.Core.Contracts;
 using System.IO;
 using System.Net.Sockets;
 using System.Net.Security;
@@ -26,6 +26,7 @@ public sealed class ChronosTcpClient : IDisposable
     private Stream?    _stream;
     private uint       _requestId = 1;
     private readonly ClientOptions _options;
+    private readonly ILogger       _log;
 
     // ── Session ───────────────────────────────────────────────────────────
     public ulong SessionId { get; private set; }
@@ -39,9 +40,10 @@ public sealed class ChronosTcpClient : IDisposable
     // ── HeartBeat ─────────────────────────────────────────────────────────
     private const int HeartbeatIntervalMs = 30_000;
 
-    public ChronosTcpClient(ClientOptions options)
+    public ChronosTcpClient(ClientOptions options, ILogger log)
     {
         _options = options;
+        _log     = log;
     }
 
     // ═════════════════════════════════════════════════════════════════════
@@ -103,7 +105,7 @@ public sealed class ChronosTcpClient : IDisposable
                 var rd   = new PacketReader(resp.Payload);
                 _        = rd.ReadInt32();
                 string m = rd.ReadUtf();
-                GD.Print($"[Client] Server message: {m}");
+                _log.Info($"Server message: {m}");
                 continue;
             }
 
@@ -149,7 +151,7 @@ public sealed class ChronosTcpClient : IDisposable
                 _crypto?.Dispose();
                 // Derive per-session key: secret + sessionId
                 _crypto = new PacketCrypto($"{_options.EncryptionSecret}:{SessionId:X16}");
-                GD.Print("[Client] Packet encryption initialized.");
+                _log.Info("Packet encryption initialized.");
             }
 
             return result;
@@ -217,12 +219,12 @@ public sealed class ChronosTcpClient : IDisposable
 
                 long serverTs = await HeartbeatAsync(ct);
                 long drift    = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - serverTs;
-                GD.Print($"[Client] Heartbeat OK. drift={drift}ms");
+                _log.Info($"Heartbeat OK. drift={drift}ms");
             }
             catch (OperationCanceledException) { break; }
             catch (Exception ex)
             {
-                GD.PrintErr($"[Client] Heartbeat error: {ex.Message}");
+                _log.Error($"Heartbeat error: {ex.Message}", ex);
                 break;
             }
         }
@@ -426,7 +428,7 @@ public sealed class ChronosTcpClient : IDisposable
             _stream?.Dispose();
             _tcp?.Close();
         }
-        catch (Exception e) { GD.PrintErr($"[Client] Dispose error: {e.Message}"); }
+        catch (Exception e) { _log.Error($"Dispose error: {e.Message}", e); }
     }
 }
 

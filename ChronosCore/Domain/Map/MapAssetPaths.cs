@@ -26,6 +26,7 @@ public sealed class MapAssetPaths
 
     private static string NormalizePath(string p)
     {
+        if (string.IsNullOrWhiteSpace(p)) return "res://";
         p = p.Trim();
         return p.EndsWith('/') ? p : p + '/';
     }

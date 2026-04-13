@@ -1,3 +1,4 @@
+using Chronos.Client.Adapters;
 using Godot;
 using System;
 using System.Threading;
@@ -372,13 +373,15 @@ public partial class LoginScreen : Node2D
         _client?.Dispose();
 
         _cts    = new CancellationTokenSource();
-        _client = new ChronosTcpClient(new ClientOptions
-        {
-            UseTls                = UseTls,
-            SkipTlsCertValidation = SkipTlsCert,
-            UseHmac               = UseHmac,
-            HmacSecret            = DefaultHmacSecret,
-        });
+        _client = new ChronosTcpClient(
+            new ClientOptions
+            {
+                UseTls                = UseTls,
+                SkipTlsCertValidation = SkipTlsCert,
+                UseHmac               = UseHmac,
+                HmacSecret            = DefaultHmacSecret,
+            },
+            new GodotLogger("Client"));
 
         try
         {

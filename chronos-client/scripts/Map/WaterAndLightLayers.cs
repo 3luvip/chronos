@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 
 namespace Map
@@ -62,7 +63,7 @@ namespace Map
             for (int tileX = camera.CullTileStartX; tileX < camera.CullTileEndX; tileX++)
             for (int tileY = camera.CullTileStartY; tileY < camera.CullTileEndY; tileY++)
             {
-                if ((_map.TileTypeAt(tileX, tileY) & TileMapData.TYPE_WATERFLOW) == 0) continue;
+                if ((_map.TileTypeAt(tileX, tileY) & TileMapData.TypeWaterflow) == 0) continue;
                 DrawWaterflowTile(canvas, camera, waterflowTexture, tileX, tileY);
             }
         }
@@ -74,8 +75,8 @@ namespace Map
         {
             const int ANIMATED_FRAME_RISE_PX = 12;
 
-            int screenX = tileX * TileMapData.TILE_SIZE - camera.PositionX;
-            int screenY = tileY * TileMapData.TILE_SIZE - camera.PositionY;
+            int screenX = tileX * TileMapData.TileSize - camera.PositionX;
+            int screenY = tileY * TileMapData.TileSize - camera.PositionY;
 
             if (!_map.HasWaterEffect())
             {
@@ -89,7 +90,7 @@ namespace Map
                                                    _animClock.WaterflowFrame);
 
             if (WaterSurfaceWorldY == 0 && _map.HasWaterEffect())
-                WaterSurfaceWorldY = tileY * TileMapData.TILE_SIZE - ANIMATED_FRAME_RISE_PX;
+                WaterSurfaceWorldY = tileY * TileMapData.TileSize - ANIMATED_FRAME_RISE_PX;
         }
 
         private Texture2D GetWaterflowTextureForCurrentMap()

@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 using System;
 using System.Collections.Generic;
@@ -179,12 +180,12 @@ namespace Map
             var sheet = GD.Load<Texture2D>(path);
             if (sheet == null) return false;
 
-            int columns = sheet.GetWidth()  / TileMapData.TILE_SIZE;
-            int rows    = sheet.GetHeight() / TileMapData.TILE_SIZE;
+            int columns = sheet.GetWidth()  / TileMapData.TileSize;
+            int rows    = sheet.GetHeight() / TileMapData.TileSize;
 
             if (columns <= 1 && rows <= 1) return false; // single image, not a sheet
 
-            _tileSheetInfo = new TileSheetInfo(sheet, columns, rows, TileMapData.TILE_SIZE);
+            _tileSheetInfo = new TileSheetInfo(sheet, columns, rows, TileMapData.TileSize);
             _tileLoadMode  = TileLoadMode.Spritesheet;
             GD.Print($"[MapAssetManager] Tile mode: spritesheet {path} ({columns}×{rows})");
             return true;

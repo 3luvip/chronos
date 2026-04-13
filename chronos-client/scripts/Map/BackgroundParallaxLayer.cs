@@ -1,3 +1,5 @@
+using Chronos.Core.Domain;
+using Chronos.Core.Domain.Map;
 using Godot;
 using System.Collections.Generic;
 
@@ -139,7 +141,7 @@ namespace Map
         /// Skip on map 122 which uses a different visual treatment.
         /// </summary>
         private void DrawWaterOverlayIfNeeded(CanvasItem canvas, MapCamera camera,
-                                              BackgroundItem item, Vector2I worldPos)
+                                              BackgroundItem item, Vec2I worldPos)
         {
             if (item.ImageId != WATER_OVERLAY_IMAGE_ID) return;
             if (_map.MapId == WATER_OVERLAY_SKIP_MAP_ID) return;
@@ -168,7 +170,7 @@ namespace Map
         /// </summary>
         private void DrawMirrorIfNeeded(CanvasItem canvas, MapCamera camera,
                                         BackgroundItem item, Texture2D texture,
-                                        Vector2I worldPos, int imageWidth, int imageHeight)
+                                        Vec2I worldPos, int imageWidth, int imageHeight)
         {
             if (!_map.IsDoubleMap() || !item.ShouldMirrorInDoubleMap) return;
 

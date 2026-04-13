@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 
 namespace Map
@@ -15,7 +16,7 @@ namespace Map
     public static class TileDrawHelper
     {
         /// <summary>Canonical tile display size in pixels.</summary>
-        public const int DISPLAY_TILE_SIZE = TileMapData.TILE_SIZE;
+        public const int DISPLAY_TILE_SIZE = TileMapData.TileSize;
 
         // ── Spritesheet drawing ───────────────────────────────────────────────────
 

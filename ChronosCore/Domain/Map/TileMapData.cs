@@ -25,6 +25,11 @@ public sealed class TileMapData
     public const int TypeSolidGround = 4096;
     public const int TypeBottom      = 8192;
     public const int TypeLethal      = 16384;
+    public const int TypeSnake       = 32768;
+    public const int TypeBang        = 65536;
+    public const int TypeJump8       = 131072;
+    public const int TypeNoThrough0  = 262144;
+    public const int TypeNoThrough1  = 524288;
 
     public int TileWidth   { get; private set; }
     public int TileHeight  { get; private set; }
@@ -32,6 +37,12 @@ public sealed class TileMapData
     public int PixelHeight => TileHeight * TileSize;
     public int MapId       { get; private set; }
     public int TileSetId   { get; private set; }
+
+    /// <summary>Server zone / UI metadata — not part of binary tile load.</summary>
+    public int ZoneId { get; set; }
+
+    public int BackgroundId   { get; set; }
+    public int BackgroundType { get; set; }
 
     public int[] TileFrames { get; private set; } = Array.Empty<int>();
     public int[] TileTypes  { get; private set; } = Array.Empty<int>();
@@ -64,8 +75,15 @@ public sealed class TileMapData
     public bool HasFlagAt(int tileX, int tileY, int flag) =>
         (TileTypeAt(tileX, tileY) & flag) == flag;
 
+    public int TileTypeAtPixel(int pixelX, int pixelY) =>
+        TileTypeAt(pixelX / TileSize, pixelY / TileSize);
+
     public bool HasFlagAtPixel(int px, int py, int flag) =>
-        HasFlagAt(px / TileSize, py / TileSize, flag);
+        (TileTypeAtPixel(px, py) & flag) == flag;
+
+    public int TileRowPixelY(int pixelY) => (pixelY / TileSize) * TileSize;
+
+    public int TileColumnPixelX(int pixelX) => (pixelX / TileSize) * TileSize;
 
     public void LoadFromBytes(byte[] data, int mapId, int tileSetId)
     {

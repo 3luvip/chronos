@@ -1,0 +1,25 @@
+# Builds and tests pure C# core (no Godot SDK). Client build requires Godot on the runner.
+name: Chronos Core
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore, build, test ChronosCore
+        run: |
+          dotnet restore ChronosCore/ChronosCore.csproj
+          dotnet build ChronosCore/ChronosCore.csproj -c Release --no-restore
+          dotnet test ChronosCore.Tests/ChronosCore.Tests.csproj -c Release --no-build --verbosity normal

@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 
 namespace Map

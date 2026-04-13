@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 using System;
 using System.Collections.Generic;
@@ -130,7 +131,7 @@ namespace Map
 
         /// <summary>Teleports the camera instantly to the given world position.</summary>
         public void SetCameraInstant(int worldX, int worldY)
-            => _camera.SetCameraInstant(worldX, worldY);
+            => _camera.SetInstant(worldX, worldY);
 
         /// <summary>Recalculates camera limits after a viewport orientation change.</summary>
         public void OnViewportResized(int newWidth, int newHeight)

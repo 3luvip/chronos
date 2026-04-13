@@ -1,3 +1,4 @@
+using Chronos.Core.Domain.Map;
 using Godot;
 
 namespace Map
@@ -42,7 +43,7 @@ namespace Map
 
         private void DrawTiles(CanvasItem canvas, MapCamera camera)
         {
-            int tileSize = TileMapData.TILE_SIZE;
+            int tileSize = TileMapData.TileSize;
 
             for (int tileX = camera.CullTileStartX; tileX < camera.CullTileEndX; tileX++)
             for (int tileY = camera.CullTileStartY; tileY < camera.CullTileEndY; tileY++)
@@ -51,7 +52,7 @@ namespace Map
                 if (rawFrame == 0) continue;
 
                 int typeFlags = _map.TileTypeAt(tileX, tileY);
-                if ((typeFlags & TileMapData.TYPE_OUTSIDE) != 0) continue;
+                if ((typeFlags & TileMapData.TypeOutside) != 0) continue;
 
                 int screenX = tileX * tileSize - camera.PositionX;
                 int screenY = tileY * tileSize - camera.PositionY;
@@ -82,7 +83,7 @@ namespace Map
 
         private static void DrawGridOverlay(CanvasItem canvas, MapCamera camera)
         {
-            int tileSize   = TileMapData.TILE_SIZE;
+            int tileSize   = TileMapData.TileSize;
             var gridColor  = new Color(0.5f, 0.5f, 0.5f, 0.08f);
 
             int startX = (camera.PositionX / tileSize) * tileSize - camera.PositionX;
