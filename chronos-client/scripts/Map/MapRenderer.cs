@@ -87,6 +87,13 @@ namespace Map
         /// </summary>
         public void LoadMap(TileMapData map, int characterWorldX, int characterWorldY)
         {
+            if (_pipeline == null || _assetManager == null)
+            {
+                GD.PushError("MapRenderer not initialized yet.");
+                return;
+            }
+            
+            
             ClearAllBackgroundItems();
             _assetManager.LoadMapAssets(map);
 

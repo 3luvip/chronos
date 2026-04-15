@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://ct3y5ahl6lhmf"]
 
-[ext_resource type="Script" uid="uid://l54ohwldpk36" path="res://scripts/LoginScreen.cs" id="1_665x1"]
+[ext_resource type="Script" uid="uid://vibs1xuejc1e" path="res://scripts/Test/MapTestScene.cs" id="1_665x1"]
+[ext_resource type="Script" uid="uid://bqdwgqkdtd8ht" path="res://scripts/Map/MapRenderer.cs" id="2_ykxls"]
 
-[node name="Node2D" type="Node2D" unique_id=34500471]
+[node name="Node2D" type="Node2D" unique_id=1613760285]
+script = ExtResource("2_ykxls")
+ResourceBasePath = "res://asset"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=500679994]
 script = ExtResource("1_665x1")
+RendererPath = NodePath("..")
