@@ -45,7 +45,7 @@ namespace Player
  
         private readonly string _basePath;
  
-        public SpriteAtlasLoader(string basePath = "res://asset/character/")
+        public SpriteAtlasLoader(string basePath = "res://asset/player/")
         {
             _basePath = basePath;
         }
@@ -77,7 +77,7 @@ namespace Player
             // 2. Fallback: individual PNG  (res://asset/character/SmallImage/Small{id}.png)
             if (!_individualCache.TryGetValue(spriteId, out var tex))
             {
-                string path = $"{_basePath}SmallImage/Small{spriteId}.png";
+                string path = $"{_basePath}{spriteId}.png";
                 tex = ResourceLoader.Exists(path) ? GD.Load<Texture2D>(path) : null;
                 _individualCache[spriteId] = tex;
             }

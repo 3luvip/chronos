@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChronosCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3e6a3cd5a16e0fa05755af266128580e5ee938e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32957f11283ed32081e90a14e4b26be6a24ea06f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChronosCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChronosCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

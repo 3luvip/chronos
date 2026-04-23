@@ -109,9 +109,11 @@ namespace Player
         }
  
         // Placeholder — in production inject via constructor/DI
-        private IPartRegistry GetPartRegistry() => Registry ?? (_sharedRegistry ??= new InMemoryPartRegistry());
- 
-        private static InMemoryPartRegistry _sharedRegistry;
+        private IPartRegistry GetPartRegistry() 
+        {
+            return Registry ?? throw new InvalidOperationException(
+                "Registry chưa được inject vào CharacterRendererNode");
+        }
  
         private static InMemoryPartRegistry BuildDefaultRegistry()
         {

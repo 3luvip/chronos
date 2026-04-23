@@ -128,27 +128,22 @@ public partial class MapTestScene : Node2D
             partId: 1, type: EquipmentPart.TYPE_HEAD,
             images: new[] {
                 new PartImageEntry(1, 0, 0),
-                new PartImageEntry(2, 0, 0),
-                new PartImageEntry(3, 0, 0),
-                new PartImageEntry(4, 0, 0),
+                new PartImageEntry(1, 0, 0)
             }));
 
         reg.Register(new EquipmentPart(
             partId: 2, type: EquipmentPart.TYPE_BODY,
             images: new[] {
-                new PartImageEntry(5, -9, 16),
-                new PartImageEntry(6, -9, 16),
-                new PartImageEntry(7, -9, 16),
-                new PartImageEntry(8, -9, 16),
+                new PartImageEntry(3, -9, 16),
+                new PartImageEntry(3, -9, 16),
             }));
 
         reg.Register(new EquipmentPart(
             partId: 3, type: EquipmentPart.TYPE_LEG,
             images: new[] {
-                new PartImageEntry(9,  -8, 10),
-                new PartImageEntry(10, -8, 10),
+                new PartImageEntry(11,  -8, 10),
                 new PartImageEntry(11, -8, 10),
-                new PartImageEntry(12, -8, 10),
+
             }));
 
         return reg;
