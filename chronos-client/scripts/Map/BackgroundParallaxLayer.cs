@@ -99,8 +99,8 @@ namespace Map
                 var texture = _assetManager.GetBackgroundItemTexture(item.ImageId);
                 if (texture == null) continue;
 
-                int imageWidth  = texture.GetWidth();
-                int imageHeight = texture.GetHeight();
+                int imageWidth  = (int)(texture.GetWidth()  * item.Scale);
+                int imageHeight = (int)(texture.GetHeight() * item.Scale);
 
                 if (!item.IsVisibleInViewport(camera.PositionX, camera.PositionY,
                                               camera.ViewportWidth, camera.ViewportHeight,
@@ -111,9 +111,9 @@ namespace Map
                 int screenY  = worldPos.Y - camera.PositionY;
 
                 if (item.Transform == 2)
-                    TileDrawHelper.DrawDecorationTextureFlippedHorizontal(canvas, texture, screenX, screenY);
+                    TileDrawHelper.DrawDecorationTextureFlippedHorizontalScaled(canvas, texture, screenX, screenY, item.Scale);
                 else
-                    TileDrawHelper.DrawDecorationTexture(canvas, texture, screenX, screenY);
+                    TileDrawHelper.DrawDecorationTextureScaled(canvas, texture, screenX, screenY, item.Scale);
 
                 DrawWaterOverlayIfNeeded(canvas, camera, item, worldPos);
                 DrawMirrorIfNeeded(canvas, camera, item, texture, worldPos, imageWidth, imageHeight);

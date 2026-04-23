@@ -1,0 +1,3230 @@
+public int cf;
+public static int[][][] CharInfo = new int[33][][]
+	{
+		new int[4][]
+		{
+			new int[3] { 0, -13, 34 },
+			new int[3] { 1, -8, 10 },
+			new int[3] { 1, -9, 16 },
+			new int[3] { 1, -9, 45 }
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -13, 35 },
+			new int[3] { 1, -8, 10 },
+			new int[3] { 1, -9, 17 },
+			new int[3] { 1, -9, 46 }
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -10, 33 },
+			new int[3] { 2, -10, 11 },
+			new int[3] { 2, -8, 16 },
+			new int[3] { 1, -12, 49 }
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -10, 32 },
+			new int[3] { 3, -12, 10 },
+			new int[3] { 3, -11, 15 },
+			new int[3] { 1, -13, 47 }
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -10, 34 },
+			new int[3] { 4, -8, 11 },
+			new int[3] { 4, -7, 17 },
+			new int[3] { 1, -12, 47 }
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -10, 34 },
+			new int[3] { 5, -12, 11 },
+			new int[3] { 5, -9, 17 },
+			new int[3] { 1, -13, 49 }
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -10, 33 },
+			new int[3] { 6, -10, 10 },
+			new int[3] { 6, -8, 16 },
+			new int[3] { 1, -12, 47 }
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -9, 36 },
+			new int[3] { 7, -5, 17 },
+			new int[3] { 7, -11, 25 },
+			new int[3] { 1, -8, 49 }
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -7, 35 },
+			new int[3] { 0, -18, 22 },
+			new int[3] { 7, -10, 25 },
+			new int[3] { 1, -7, 48 }
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -11, 35 },
+			new int[3] { 10, -3, 25 },
+			new int[3] { 12, -10, 26 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -11, 37 },
+			new int[3] { 11, -3, 25 },
+			new int[3] { 12, -11, 27 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -14, 34 },
+			new int[3] { 12, -8, 21 },
+			new int[3] { 9, -7, 31 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -12, 35 },
+			new int[3] { 8, -5, 14 },
+			new int[3] { 8, -15, 29 },
+			new int[3] { 1, -9, 49 }
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -9, 34 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 10, -7, 19 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -13, 34 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 11, -10, 19 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -8, 32 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 2, -6, 15 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -8, 32 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 13, -12, 16 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -10, 31 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 7, -13, 20 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -11, 32 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 8, -15, 26 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -9, 33 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 14, -8, 18 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -11, 33 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 15, -6, 19 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -16, 31 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 9, -8, 28 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -14, 34 },
+			new int[3] { 1, -8, 10 },
+			new int[3] { 8, -16, 28 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -8, 36 },
+			new int[3] { 7, -5, 17 },
+			new int[3] { 0, -5, 25 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -9, 31 },
+			new int[3] { 9, -12, 9 },
+			new int[3] { 0, -6, 20 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 2, -9, 36 },
+			new int[3] { 13, -5, 17 },
+			new int[3] { 16, -11, 25 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -9, 34 },
+			new int[3] { 8, -5, 13 },
+			new int[3] { 10, -7, 19 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -13, 34 },
+			new int[3] { 8, -5, 13 },
+			new int[3] { 11, -10, 19 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -8, 32 },
+			new int[3] { 8, -5, 13 },
+			new int[3] { 2, -6, 15 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 1, -8, 32 },
+			new int[3] { 8, -5, 13 },
+			new int[3] { 13, -12, 16 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -9, 33 },
+			new int[3] { 8, -5, 13 },
+			new int[3] { 14, -8, 18 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -11, 33 },
+			new int[3] { 8, -5, 13 },
+			new int[3] { 15, -6, 19 },
+			new int[3]
+		},
+		new int[4][]
+		{
+			new int[3] { 0, -16, 32 },
+			new int[3] { 8, -5, 13 },
+			new int[3] { 9, -8, 29 },
+			new int[3]
+		}
+	};
+
+public class PartImage
+{
+	public short id;
+
+	public sbyte dx;
+
+	public sbyte dy;
+}
+
+
+public class Part
+{
+	public int type;
+
+	public PartImage[] pi;
+
+	public Part(int type)
+	{
+		this.type = type;
+		if (type == 0)
+		{
+			pi = new PartImage[3];
+		}
+		if (type == 1)
+		{
+			pi = new PartImage[17];
+		}
+		if (type == 2)
+		{
+			pi = new PartImage[14];
+		}
+		if (type == 3)
+		{
+			pi = new PartImage[2];
+		}
+	}
+}
+	public static int HCENTER = 1;
+
+	public static int VCENTER = 2;
+
+	public static int LEFT = 4;
+
+	public static int RIGHT = 8;
+
+	public static int TOP = 16;
+
+	public static int BOTTOM = 32;
+
+
+    public class StaticObj
+{
+	public static int TOP_CENTER = mGraphics.TOP | mGraphics.HCENTER;
+
+	public static int TOP_LEFT = mGraphics.TOP | mGraphics.LEFT;
+
+	public static int TOP_RIGHT = mGraphics.TOP | mGraphics.RIGHT;
+
+	public static int BOTTOM_HCENTER = mGraphics.BOTTOM | mGraphics.HCENTER;
+
+	public static int BOTTOM_LEFT = mGraphics.BOTTOM | mGraphics.LEFT;
+
+	public static int BOTTOM_RIGHT = mGraphics.BOTTOM | mGraphics.RIGHT;
+
+	public static int VCENTER_HCENTER = mGraphics.VCENTER | mGraphics.HCENTER;
+
+	public static int VCENTER_LEFT = mGraphics.VCENTER | mGraphics.LEFT;
+
+	public const string SAVE_SKILL = "skill";
+
+	public const string SAVE_VERSIONUPDATE = "versionUpdate";
+
+	public const string SAVE_KEYKILL = "keyskill";
+
+	public const string SAVE_ITEM = "item";
+
+	public const int NORMAL = 0;
+
+	public const int UP_FALL = 1;
+
+	public const int UP_RUN = 2;
+
+	public const int FALL_RIGHT = 3;
+
+	public const int FALL_LEFT = 4;
+
+	public const int MOD_ATTACK_ME = 100;
+
+	public const int TYPE_PLAYER = 3;
+
+	public const int TYPE_NON = 0;
+
+	public const int TYPE_VUKHI = 1;
+
+	public const int TYPE_AO = 2;
+
+	public const int TYPE_LIEN = 3;
+
+	public const int TYPE_TAY = 4;
+
+	public const int TYPE_NHAN = 5;
+
+	public const int TYPE_QUAN = 6;
+
+	public const int TYPE_BOI = 7;
+
+	public const int TYPE_GIAY = 8;
+
+	public const int TYPE_PHU = 9;
+
+	public const int TYPE_OTHER = 11;
+
+	public const int TYPE_CRYSTAL = 15;
+
+	public const int FOCUS_MOD = 1;
+
+	public const int FOCUS_ITEM = 2;
+
+	public const int FOCUS_PLAYER = 3;
+
+	public const int FOCUS_ZONE = 4;
+
+	public const int FOCUS_NPC = 5;
+
+	public static int[] SKYCOLOR = new int[17]
+	{
+		1618168, 1938102, 43488, 16316528, 1628316, 3270903, 3576979, 6999725, 14594155, 8562616,
+		16026508, 1052688, 13952747, 15268088, 1628316, 2631752, 4079166
+	};
+}
+
+
+
+public static Part[] parts;
+	public int head;
+
+	public int leg;
+
+	public int body;
+
+	public int bag;
+
+	public int wp;
+
+public void paintCharBody(mGraphics g, int cx, int cy, int cdir, int cf, bool isPaintBag)
+	{
+		ph = GameScr.parts[head];
+		pl = GameScr.parts[leg];
+		pb = GameScr.parts[body];
+		if (bag >= 0 && statusMe != 14)
+		{
+			if (!ClanImage.idImages.containsKey(bag + string.Empty))
+			{
+				ClanImage.idImages.put(bag + string.Empty, new ClanImage());
+				Service.gI().requestBagImage((sbyte)bag);
+			}
+			else
+			{
+				ClanImage clanImage = (ClanImage)ClanImage.idImages.get(bag + string.Empty);
+				if (clanImage.idImage != null && isPaintBag)
+				{
+					paintBag(g, clanImage.idImage, cx, cy, cdir, isPaintChar: true);
+				}
+			}
+		}
+		int num = 2;
+		int anchor = 24;
+		int anchor2 = StaticObj.TOP_RIGHT;
+		int num2 = -1;
+		if (cdir == 1)
+		{
+			num = 0;
+			anchor = 0;
+			anchor2 = 0;
+			num2 = 1;
+		}
+		if (statusMe == 14)
+		{
+			if (GameCanvas.gameTick % 4 > 0)
+			{
+				g.drawImage(ItemMap.imageFlare, cx, cy - ch - 11, mGraphics.HCENTER | mGraphics.VCENTER);
+			}
+			int num3 = 0;
+			if (head == 89 || head == 457 || head == 460 || head == 461 || head == 462 || head == 463 || head == 464 || head == 465 || head == 466)
+			{
+				num3 = 15;
+			}
+			SmallImage.drawSmallImage(g, 834, cx, cy - CharInfo[cf][2][2] + pb.pi[CharInfo[cf][2][0]].dy - 2 + num3, num, StaticObj.TOP_CENTER);
+			SmallImage.drawSmallImage(g, 79, cx, cy - ch - 8, 0, mGraphics.HCENTER | mGraphics.BOTTOM);
+			SmallImage.drawSmallImage(g, ph.pi[CharInfo[cf][0][0]].id, cx + (CharInfo[cf][0][1] + ph.pi[CharInfo[cf][0][0]].dx) * num2, cy - CharInfo[cf][0][2] + ph.pi[CharInfo[cf][0][0]].dy, num, anchor);
+			paintHat_behind(g, cf, cy - CharInfo[cf][2][2] + pb.pi[CharInfo[cf][2][0]].dy);
+			if (isHead_2Fr(head))
+			{
+				Part part = GameScr.parts[getFHead(head)];
+				SmallImage.drawSmallImage(g, part.pi[CharInfo[cf][0][0]].id, cx + (CharInfo[cf][0][1] + part.pi[CharInfo[cf][0][0]].dx) * num2, cy - CharInfo[cf][0][2] + part.pi[CharInfo[cf][0][0]].dy, num, anchor);
+			}
+			else
+			{
+				SmallImage.drawSmallImage(g, ph.pi[CharInfo[cf][0][0]].id, cx + (CharInfo[cf][0][1] + ph.pi[CharInfo[cf][0][0]].dx) * num2, cy - CharInfo[cf][0][2] + ph.pi[CharInfo[cf][0][0]].dy, num, anchor);
+			}
+			paintHat_front(g, cf, cy - CharInfo[cf][2][2] + pb.pi[CharInfo[cf][2][0]].dy);
+			paintRedEye(g, cx + (CharInfo[cf][0][1] + ph.pi[CharInfo[cf][0][0]].dx) * num2, cy - CharInfo[cf][0][2] + ph.pi[CharInfo[cf][0][0]].dy, num, anchor);
+		}
+		else
+		{
+			paintHat_behind(g, cf, cy - CharInfo[cf][2][2] + pb.pi[CharInfo[cf][2][0]].dy);
+			if (isHead_2Fr(head))
+			{
+				Part part2 = GameScr.parts[getFHead(head)];
+				SmallImage.drawSmallImage(g, part2.pi[CharInfo[cf][0][0]].id, cx + (CharInfo[cf][0][1] + part2.pi[CharInfo[cf][0][0]].dx) * num2, cy - CharInfo[cf][0][2] + part2.pi[CharInfo[cf][0][0]].dy, num, anchor);
+			}
+			else
+			{
+				SmallImage.drawSmallImage(g, ph.pi[CharInfo[cf][0][0]].id, cx + (CharInfo[cf][0][1] + ph.pi[CharInfo[cf][0][0]].dx) * num2, cy - CharInfo[cf][0][2] + ph.pi[CharInfo[cf][0][0]].dy, num, anchor);
+			}
+			SmallImage.drawSmallImage(g, pl.pi[CharInfo[cf][1][0]].id, cx + (CharInfo[cf][1][1] + pl.pi[CharInfo[cf][1][0]].dx) * num2, cy - CharInfo[cf][1][2] + pl.pi[CharInfo[cf][1][0]].dy, num, anchor);
+			SmallImage.drawSmallImage(g, pb.pi[CharInfo[cf][2][0]].id, cx + (CharInfo[cf][2][1] + pb.pi[CharInfo[cf][2][0]].dx) * num2, cy - CharInfo[cf][2][2] + pb.pi[CharInfo[cf][2][0]].dy, num, anchor);
+			paintRedEye(g, cx + (CharInfo[cf][0][1] + ph.pi[CharInfo[cf][0][0]].dx) * num2, cy - CharInfo[cf][0][2] + ph.pi[CharInfo[cf][0][0]].dy, num, anchor);
+		}
+		ch = ((isMonkey != 1 && !isFusion) ? (CharInfo[0][0][2] + ph.pi[CharInfo[0][0][0]].dy + 10) : 60);
+		int num4 = ((Res.abs(ph.pi[CharInfo[cf][0][0]].dy) < 22) ? ph.pi[CharInfo[cf][0][0]].dy : ((ph.pi[CharInfo[cf][0][0]].dy >= 0) ? (ph.pi[CharInfo[cf][0][0]].dy - 5) : (ph.pi[CharInfo[cf][0][0]].dy + 5)));
+		cH_new = cy - CharInfo[cf][0][2] + num4;
+		if (statusMe == 1 && charID > 0 && !isMask && !isUseChargeSkill() && !isWaitMonkey && skillPaint == null && cf != 23 && bag < 0 && ((GameCanvas.gameTick + charID) % 30 == 0 || isFreez))
+		{
+			g.drawImage((cgender != 1) ? eyeTraiDat : eyeNamek, cx + -((cgender != 1) ? 2 : 2) * num2, cy - 32 + ((cgender != 1) ? 11 : 10) - cf, anchor2);
+		}
+		if (eProtect != null)
+		{
+			eProtect.paint(g);
+		}
+		paintPKFlag(g);
+	}
+
+
+
+
+public static void drawSmallImage(mGraphics g, int id, int x, int y, int transform, int anchor)
+	{
+		if (imgbig == null)
+		{
+			Small small = imgNew[id];
+			if (small == null)
+			{
+				createImage(id);
+			}
+			else
+			{
+				g.drawRegion(small, 0, 0, mGraphics.getImageWidth(small.img), mGraphics.getImageHeight(small.img), transform, x, y, anchor);
+			}
+		}
+		else if (smallImg != null)
+		{
+			if (id >= smallImg.Length || smallImg[id][1] >= 256 || smallImg[id][3] >= 256 || smallImg[id][2] >= 256 || smallImg[id][4] >= 256)
+			{
+				Small small2 = imgNew[id];
+				if (small2 == null)
+				{
+					createImage(id);
+				}
+				else
+				{
+					small2.paint(g, transform, x, y, anchor);
+				}
+			}
+			else if (imgbig[smallImg[id][0]] != null)
+			{
+				g.drawRegion(imgbig[smallImg[id][0]], smallImg[id][1], smallImg[id][2], smallImg[id][3], smallImg[id][4], transform, x, y, anchor);
+			}
+		}
+		else if (GameCanvas.currentScreen != GameScr.gI())
+		{
+			Small small3 = imgNew[id];
+			if (small3 == null)
+			{
+				createImage(id);
+			}
+			else
+			{
+				small3.paint(g, transform, x, y, anchor);
+			}
+		}
+	}
+
+
+namespace Assets.src.e
+{
+    public class Small
+    {
+        public Image img;
+
+        public int id;
+
+        public int timePaint;
+
+        public int timeUpdate;
+
+        public Small(Image img, int id)
+        {
+            this.img = img;
+            this.id = id;
+            timePaint = 0;
+            timeUpdate = 0;
+        }
+
+        public void paint(mGraphics g, int transform, int x, int y, int anchor)
+        {
+            g.drawRegion(img, 0, 0, mGraphics.getImageWidth(img), mGraphics.getImageHeight(img), transform, x, y, anchor);
+            if (GameCanvas.gameTick % 1000 == 0)
+            {
+                timePaint++;
+                timeUpdate = timePaint;
+            }
+        }
+
+        public void paint(mGraphics g, int transform, int f, int x, int y, int w, int h, int anchor)
+        {
+            paint(g, transform, f, x, y, w, h, anchor, isClip: false);
+        }
+
+        public void paint(mGraphics g, int transform, int f, int x, int y, int w, int h, int anchor, bool isClip)
+        {
+            if (mGraphics.getImageWidth(img) != 1)
+            {
+                g.drawRegion(img, 0, f * w, w, h, transform, x, y, anchor, isClip);
+                if (GameCanvas.gameTick % 1000 == 0)
+                {
+                    timePaint++;
+                    timeUpdate = timePaint;
+                }
+            }
+        }
+
+        public void update()
+        {
+            timeUpdate++;
+            if (timeUpdate - timePaint > 1 && !Char.myCharz().isCharBodyImageID(id))
+            {
+                SmallImage.imgNew[id] = null;
+            }
+        }
+    }
+}
+
+INSERT INTO `parts` (`id`, `type`, `pi`) VALUES
+(1, 0, '[{\"dx\":0,\"dy\":0,\"id\":17},{\"dx\":0,\"dy\":0,\"id\":18},{\"dx\":0,\"dy\":0,\"id\":20}]'),
+(2, 1, '[{\"dx\":0,\"dy\":0,\"id\":80},{\"dx\":0,\"dy\":0,\"id\":1},{\"dx\":0,\"dy\":0,\"id\":2},{\"dx\":0,\"dy\":0,\"id\":3},{\"dx\":0,\"dy\":0,\"id\":4},{\"dx\":0,\"dy\":0,\"id\":5},{\"dx\":0,\"dy\":0,\"id\":6},{\"dx\":0,\"dy\":0,\"id\":7},{\"dx\":1,\"dy\":0,\"id\":8},{\"dx\":0,\"dy\":0,\"id\":9},{\"dx\":0,\"dy\":0,\"id\":10},{\"dx\":0,\"dy\":0,\"id\":11},{\"dx\":0,\"dy\":0,\"id\":12},{\"dx\":0,\"dy\":0,\"id\":13},{\"dx\":0,\"dy\":0,\"id\":14},{\"dx\":0,\"dy\":0,\"id\":15},{\"dx\":0,\"dy\":0,\"id\":16}]'),
+(3, 2, '[{\"dx\":0,\"dy\":0,\"id\":21},{\"dx\":0,\"dy\":0,\"id\":22},{\"dx\":0,\"dy\":0,\"id\":23},{\"dx\":0,\"dy\":0,\"id\":24},{\"dx\":0,\"dy\":0,\"id\":25},{\"dx\":0,\"dy\":0,\"id\":26},{\"dx\":0,\"dy\":0,\"id\":27},{\"dx\":0,\"dy\":0,\"id\":28},{\"dx\":0,\"dy\":0,\"id\":29},{\"dx\":0,\"dy\":0,\"id\":30},{\"dx\":0,\"dy\":0,\"id\":31},{\"dx\":0,\"dy\":0,\"id\":32},{\"dx\":0,\"dy\":0,\"id\":33},{\"dx\":0,\"dy\":0,\"id\":34}]'),
+(4, 0, '[{\"dx\":5,\"dy\":-2,\"id\":82},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0}]'),
+(5, 1, '[{\"dx\":1,\"dy\":4,\"id\":0},{\"dx\":-4,\"dy\":-1,\"id\":81},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0}]'),
+(6, 2, '[{\"dx\":3,\"dy\":2,\"id\":0},{\"dx\":-1,\"dy\":2,\"id\":83},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0},{\"dx\":0,\"dy\":0,\"id\":0}]'),
+(7, 0, '[{\"dx\":2,\"dy\":-1,\"id\":91},{\"dx\":1,\"dy\":-1,\"id\":92},{\"dx\":0,\"dy\":0,\"id\":20}]'),
+(8, 1, '[{\"dx\":1,\"dy\":0,\"id\":119},{\"dx\":-3,\"dy\":-2,\"id\":103},{\"dx\":-2,\"dy\":-3,\"id\":93},{\"dx\":-1,\"dy\":-3,\"id\":94},{\"dx\":-1,\"dy\":-3,\"id\":95},{\"dx\":0,\"dy\":-1,\"id\":96},{\"dx\":-1,\"dy\":-2,\"id\":97},{\"dx\":0,\"dy\":1,\"id\":102},{\"dx\":1,\"dy\":0,\"id\":106},{\"dx\":-4,\"dy\":0,\"id\":101},{\"dx\":0,\"dy\":0,\"id\":105},{\"dx\":-3,\"dy\":0,\"id\":104},{\"dx\":0,\"dy\":0,\"id\":100},{\"dx\":0,\"dy\":0,\"id\":239},{\"dx\":-1,\"dy\":-1,\"id\":98},{\"dx\":-3,\"dy\":0,\"id\":99},{\"dx\":0,\"dy\":0,\"id\":16}]'),
+(9, 2, '[{\"dx\":0,\"dy\":-7,\"id\":120},{\"dx\":0,\"dy\":0,\"id\":118},{\"dx\":0,\"dy\":-3,\"id\":107},{\"dx\":0,\"dy\":0,\"id\":108},{\"dx\":0,\"dy\":0,\"id\":109},{\"dx\":-2,\"dy\":0,\"id\":110},{\"dx\":-1,\"dy\":0,\"id\":111},{\"dx\":-5,\"dy\":-1,\"id\":115},{\"dx\":-4,\"dy\":-3,\"id\":116},{\"dx\":-1,\"dy\":0,\"id\":117},{\"dx\":0,\"dy\":0,\"id\":112},{\"dx\":-5,\"dy\":1,\"id\":113},{\"dx\":0,\"dy\":0,\"id\":114},{\"dx\":0,\"dy\":0,\"id\":34}]'),
+(10, 0, '[{\"dx\":4,\"dy\":3,\"id\":121},{\"dx\":5,\"dy\":3,\"id\":122},{\"dx\":0,\"dy\":0,\"id\":20}]'),
+(11, 1, '[{\"dx\":0,\"dy\":0,\"id\":151},{\"dx\":0,\"dy\":0,\"id\":123},{\"dx\":0,\"dy\":0,\"id\":124},{\"dx\":0,\"dy\":0,\"id\":125},{\"dx\":0,\"dy\":0,\"id\":126},{\"dx\":1,\"dy\":0,\"id\":127},{\"dx\":1,\"dy\":0,\"id\":128},{\"dx\":1,\"dy\":-1,\"id\":129},{\"dx\":0,\"dy\":0,\"id\":130},{\"dx\":-1,\"dy\":-1,\"id\":131},{\"dx\":0,\"dy\":0,\"id\":132},{\"dx\":0,\"dy\":0,\"id\":133},{\"dx\":0,\"dy\":0,\"id\":134},{\"dx\":0,\"dy\":0,\"id\":135},{\"dx\":1,\"dy\":0,\"id\":136},{\"dx\":0,\"dy\":0,\"id\":150},{\"dx\":0,\"dy\":0,\"id\":16}]'),
+(12, 2, '[{\"dx\":0,\"dy\":0,\"id\":137},{\"dx\":0,\"dy\":0,\"id\":138},{\"dx\":0,\"dy\":0,\"id\":139},{\"dx\":0,\"dy\":0,\"id\":140},{\"dx\":0,\"dy\":0,\"id\":141},{\"dx\":0,\"dy\":0,\"id\":142},{\"dx\":0,\"dy\":0,\"id\":143},{\"dx\":0,\"dy\":0,\"id\":144},{\"dx\":0,\"dy\":0,\"id\":145},{\"dx\":0,\"dy\":0,\"id\":146},{\"dx\":0,\"dy\":0,\"id\":147},{\"dx\":0,\"dy\":0,\"id\":148},{\"dx\":0,\"dy\":0,\"id\":149},{\"dx\":0,\"dy\":0,\"id\":34}]'),
+(13, 1, '[{\"dx\":0,\"dy\":0,\"id\":159},{\"dx\":0,\"dy\":0,\"id\":152},{\"dx\":0,\"dy\":0,\"id\":153},{\"dx\":0,\"dy\":0,\"id\":154},{\"dx\":0,\"dy\":0,\"id\":155},{\"dx\":1,\"dy\":0,\"id\":156},{\"dx\":0,\"dy\":0,\"id\":157},{\"dx\":0,\"dy\":0,\"id\":160},{\"dx\":0,\"dy\":0,\"id\":161},{\"dx\":-1,\"dy\":0,\"id\":162},{\"dx\":0,\"dy\":0,\"id\":163},{\"dx\":0,\"dy\":0,\"id\":164},{\"dx\":0,\"dy\":0,\"id\":165},{\"dx\":0,\"dy\":0,\"id\":166},{\"dx\":0,\"dy\":0,\"id\":167},{\"dx\":0,\"dy\":0,\"id\":158},{\"dx\":0,\"dy\":0,\"id\":16}]'),
+(14, 2, '[{\"dx\":0,\"dy\":0,\"id\":168},{\"dx\":0,\"dy\":0,\"id\":169},{\"dx\":0,\"dy\":0,\"id\":170},{\"dx\":0,\"dy\":0,\"id\":171},{\"dx\":0,\"dy\":0,\"id\":172},{\"dx\":0,\"dy\":0,\"id\":173},{\"dx\":0,\"dy\":0,\"id\":174},{\"dx\":0,\"dy\":0,\"id\":175},{\"dx\":0,\"dy\":0,\"id\":176},{\"dx\":0,\"dy\":0,\"id\":177},{\"dx\":0,\"dy\":0,\"id\":178},{\"dx\":0,\"dy\":0,\"id\":179},{\"dx\":0,\"dy\":0,\"id\":180},{\"dx\":0,\"dy\":0,\"id\":34}]'),
+(15, 1, '[{\"dx\":0,\"dy\":0,\"id\":181},{\"dx\":0,\"dy\":0,\"id\":182},{\"dx\":0,\"dy\":0,\"id\":183},{\"dx\":0,\"dy\":0,\"id\":184},{\"dx\":0,\"dy\":0,\"id\":185},{\"dx\":0,\"dy\":0,\"id\":186},{\"dx\":0,\"dy\":0,\"id\":187},{\"dx\":1,\"dy\":0,\"id\":188},{\"dx\":1,\"dy\":0,\"id\":189},{\"dx\":0,\"dy\":0,\"id\":190},{\"dx\":0,\"dy\":0,\"id\":191},{\"dx\":0,\"dy\":0,\"id\":192},{\"dx\":0,\"dy\":0,\"id\":193},{\"dx\":0,\"dy\":0,\"id\":194},{\"dx\":0,\"dy\":0,\"id\":195},{\"dx\":0,\"dy\":0,\"id\":196},{\"dx\":0,\"dy\":0,\"id\":16}]'),
+(16, 2, '[{\"dx\":0,\"dy\":0,\"id\":197},{\"dx\":0,\"dy\":0,\"id\":198},{\"dx\":0,\"dy\":0,\"id\":199},{\"dx\":0,\"dy\":0,\"id\":200},{\"dx\":0,\"dy\":0,\"id\":201},{\"dx\":0,\"dy\":0,\"id\":202},{\"dx\":0,\"dy\":0,\"id\":203},{\"dx\":0,\"dy\":0,\"id\":204},{\"dx\":0,\"dy\":0,\"id\":205},{\"dx\":0,\"dy\":0,\"id\":206},{\"dx\":0,\"dy\":0,\"id\":207},{\"dx\":0,\"dy\":0,\"id\":208},{\"dx\":0,\"dy\":0,\"id\":209},{\"dx\":0,\"dy\":0,\"id\":34}]'),
+(17, 1, '[{\"dx\":0,\"dy\":0,\"id\":238},{\"dx\":-2,\"dy\":0,\"id\":210},{\"dx\":0,\"dy\":-1,\"id\":211},{\"dx\":0,\"dy\":0,\"id\":212},{\"dx\":0,\"dy\":0,\"id\":213},{\"dx\":0,\"dy\":0,\"id\":214},{\"dx\":0,\"dy\":0,\"id\":215},{\"dx\":0,\"dy\":0,\"id\":216},{\"dx\":1,\"dy\":0,\"id\":217},{\"dx\":0,\"dy\":0,\"id\":218},{\"dx\":0,\"dy\":0,\"id\":219},{\"dx\":0,\"dy\":0,\"id\":220},{\"dx\":0,\"dy\":0,\"id\":221},{\"dx\":0,\"dy\":0,\"id\":222},{\"dx\":0,\"dy\":0,\"id\":223},{\"dx\":0,\"dy\":0,\"id\":224},{\"dx\":0,\"dy\":0,\"id\":16}]'),
+(18, 2, '[{\"dx\":0,\"dy\":-7,\"id\":237},{\"dx\":0,\"dy\":0,\"id\":225},{\"dx\":-1,\"dy\":-3,\"id\":226},{\"dx\":0,\"dy\":0,\"id\":227},{\"dx\":-1,\"dy\":0,\"id\":228},{\"dx\":-2,\"dy\":0,\"id\":229},{\"dx\":-3,\"dy\":0,\"id\":230},{\"dx\":-5,\"dy\":-1,\"id\":234},{\"dx\":-4,\"dy\":-3,\"id\":235},{\"dx\":-2,\"dy\":0,\"id\":236},{\"dx\":0,\"dy\":0,\"id\":231},{\"dx\":-5,\"dy\":1,\"id\":232},{\"dx\":0,\"dy\":0,\"id\":233},{\"dx\":0,\"dy\":0,\"id\":34}]'),
+
+
+using System;
+using Assets.src.e;
+
+public class SmallImage
+{
+	public static int[][] smallImg;
+
+	public static SmallImage instance;
+
+	public static Image[] imgbig;
+
+	public static Small[] imgNew;
+
+	public static MyVector vKeys = new MyVector();
+
+	public static Image imgEmpty = null;
+
+	public static sbyte[] newSmallVersion;
+
+	public static int smallCount;
+
+	public static short maxSmall;
+
+	public SmallImage()
+	{
+		readImage();
+	}
+
+	public static void loadBigRMS()
+	{
+		if (imgbig == null)
+		{
+			imgbig = new Image[5]
+			{
+				GameCanvas.loadImageRMS("/img/Big0.png"),
+				GameCanvas.loadImageRMS("/img/Big1.png"),
+				GameCanvas.loadImageRMS("/img/Big2.png"),
+				GameCanvas.loadImageRMS("/img/Big3.png"),
+				GameCanvas.loadImageRMS("/img/Big4.png")
+			};
+		}
+	}
+
+	public static void freeBig()
+	{
+		imgbig = null;
+		mSystem.gcc();
+	}
+
+	public static void loadBigImage()
+	{
+		imgEmpty = Image.createRGBImage(new int[1], 1, 1, bl: true);
+	}
+
+	public static void init()
+	{
+		instance = null;
+		instance = new SmallImage();
+	}
+
+	public void readData(byte[] data)
+	{
+	}
+
+	public void readImage()
+	{
+		int num = 0;
+		try
+		{
+			DataInputStream dataInputStream = new DataInputStream(Rms.loadRMS("NR_image"));
+			short num2 = dataInputStream.readShort();
+			smallImg = new int[num2][];
+			for (int i = 0; i < smallImg.Length; i++)
+			{
+				smallImg[i] = new int[5];
+			}
+			for (int j = 0; j < num2; j++)
+			{
+				num++;
+				smallImg[j][0] = dataInputStream.readUnsignedByte();
+				smallImg[j][1] = dataInputStream.readShort();
+				smallImg[j][2] = dataInputStream.readShort();
+				smallImg[j][3] = dataInputStream.readShort();
+				smallImg[j][4] = dataInputStream.readShort();
+			}
+		}
+		catch (Exception ex)
+		{
+			Cout.LogError3("Loi readImage: " + ex.ToString() + "i= " + num);
+		}
+	}
+
+	public static void clearHastable()
+	{
+	}
+
+	public static void createImage(int id)
+	{
+		Res.outz("is request =" + id + " zoom=" + mGraphics.zoomLevel);
+		if (mGraphics.zoomLevel == 1)
+		{
+			Image image = GameCanvas.loadImage("/SmallImage/Small" + id + ".png");
+			if (image != null)
+			{
+				imgNew[id] = new Small(image, id);
+				return;
+			}
+			imgNew[id] = new Small(imgEmpty, id);
+			Service.gI().requestIcon(id);
+			return;
+		}
+		Image image2 = GameCanvas.loadImage("/SmallImage/Small" + id + ".png");
+		if (image2 != null)
+		{
+			imgNew[id] = new Small(image2, id);
+			return;
+		}
+		bool flag = false;
+		sbyte[] array = Rms.loadRMS(mGraphics.zoomLevel + "Small" + id);
+		if (array != null)
+		{
+			if (newSmallVersion != null && array.Length % 127 != newSmallVersion[id])
+			{
+				flag = true;
+			}
+			if (!flag)
+			{
+				Image image3 = Image.createImage(array, 0, array.Length);
+				if (image3 != null)
+				{
+					imgNew[id] = new Small(image3, id);
+				}
+				else
+				{
+					flag = true;
+				}
+			}
+		}
+		else
+		{
+			flag = true;
+		}
+		if (flag)
+		{
+			imgNew[id] = new Small(imgEmpty, id);
+			Service.gI().requestIcon(id);
+		}
+	}
+
+	public static void drawSmallImage(mGraphics g, int id, int x, int y, int transform, int anchor)
+	{
+		if (imgbig == null)
+		{
+			Small small = imgNew[id];
+			if (small == null)
+			{
+				createImage(id);
+			}
+			else
+			{
+				g.drawRegion(small, 0, 0, mGraphics.getImageWidth(small.img), mGraphics.getImageHeight(small.img), transform, x, y, anchor);
+			}
+		}
+		else if (smallImg != null)
+		{
+			if (id >= smallImg.Length || smallImg[id][1] >= 256 || smallImg[id][3] >= 256 || smallImg[id][2] >= 256 || smallImg[id][4] >= 256)
+			{
+				Small small2 = imgNew[id];
+				if (small2 == null)
+				{
+					createImage(id);
+				}
+				else
+				{
+					small2.paint(g, transform, x, y, anchor);
+				}
+			}
+			else if (imgbig[smallImg[id][0]] != null)
+			{
+				g.drawRegion(imgbig[smallImg[id][0]], smallImg[id][1], smallImg[id][2], smallImg[id][3], smallImg[id][4], transform, x, y, anchor);
+			}
+		}
+		else if (GameCanvas.currentScreen != GameScr.gI())
+		{
+			Small small3 = imgNew[id];
+			if (small3 == null)
+			{
+				createImage(id);
+			}
+			else
+			{
+				small3.paint(g, transform, x, y, anchor);
+			}
+		}
+	}
+
+	public static void drawSmallImage(mGraphics g, int id, int f, int x, int y, int w, int h, int transform, int anchor)
+	{
+		if (imgbig == null)
+		{
+			Small small = imgNew[id];
+			if (small == null)
+			{
+				createImage(id);
+			}
+			else
+			{
+				g.drawRegion(small.img, 0, f * w, w, h, transform, x, y, anchor);
+			}
+		}
+		else if (smallImg != null)
+		{
+			if (id >= smallImg.Length || smallImg[id] == null || smallImg[id][1] >= 256 || smallImg[id][3] >= 256 || smallImg[id][2] >= 256 || smallImg[id][4] >= 256)
+			{
+				Small small2 = imgNew[id];
+				if (small2 == null)
+				{
+					createImage(id);
+				}
+				else
+				{
+					small2.paint(g, transform, f, x, y, w, h, anchor);
+				}
+			}
+			else if (smallImg[id][0] != 4 && imgbig[smallImg[id][0]] != null)
+			{
+				g.drawRegion(imgbig[smallImg[id][0]], 0, f * w, w, h, transform, x, y, anchor);
+			}
+			else
+			{
+				Small small3 = imgNew[id];
+				if (small3 == null)
+				{
+					createImage(id);
+				}
+				else
+				{
+					small3.paint(g, transform, f, x, y, w, h, anchor);
+				}
+			}
+		}
+		else if (GameCanvas.currentScreen != GameScr.gI())
+		{
+			Small small4 = imgNew[id];
+			if (small4 == null)
+			{
+				createImage(id);
+			}
+			else
+			{
+				small4.paint(g, transform, f, x, y, w, h, anchor);
+			}
+		}
+	}
+
+	public static void update()
+	{
+		int num = 0;
+		if (GameCanvas.gameTick % 1000 != 0)
+		{
+			return;
+		}
+		for (int i = 0; i < imgNew.Length; i++)
+		{
+			if (imgNew[i] != null)
+			{
+				num++;
+				imgNew[i].update();
+				smallCount++;
+			}
+		}
+		if (num > 200 && GameCanvas.lowGraphic)
+		{
+			imgNew = new Small[maxSmall];
+		}
+	}
+}
+
+
+using System;
+using System.Collections;
+using Assets.src.e;
+using UnityEngine;
+
+public class mGraphics
+{
+	public static int HCENTER = 1;
+
+	public static int VCENTER = 2;
+
+	public static int LEFT = 4;
+
+	public static int RIGHT = 8;
+
+	public static int TOP = 16;
+
+	public static int BOTTOM = 32;
+
+	private float r;
+
+	private float g;
+
+	private float b;
+
+	private float a;
+
+	public int clipX;
+
+	public int clipY;
+
+	public int clipW;
+
+	public int clipH;
+
+	private bool isClip;
+
+	private bool isTranslate = true;
+
+	private int translateX;
+
+	private int translateY;
+
+	private float translateXf;
+
+	private float translateYf;
+
+	public static int zoomLevel = 1;
+
+	public const int BASELINE = 64;
+
+	public const int SOLID = 0;
+
+	public const int DOTTED = 1;
+
+	public const int TRANS_MIRROR = 2;
+
+	public const int TRANS_MIRROR_ROT180 = 1;
+
+	public const int TRANS_MIRROR_ROT270 = 4;
+
+	public const int TRANS_MIRROR_ROT90 = 7;
+
+	public const int TRANS_NONE = 0;
+
+	public const int TRANS_ROT180 = 3;
+
+	public const int TRANS_ROT270 = 6;
+
+	public const int TRANS_ROT90 = 5;
+
+	public static Hashtable cachedTextures = new Hashtable();
+
+	public static int addYWhenOpenKeyBoard;
+
+	private int clipTX;
+
+	private int clipTY;
+
+	private int currentBGColor;
+
+	private Vector2 pos = new Vector2(0f, 0f);
+
+	private Rect rect;
+
+	private Matrix4x4 matrixBackup;
+
+	private Vector2 pivot;
+
+	public Vector2 size = new Vector2(128f, 128f);
+
+	public Vector2 relativePosition = new Vector2(0f, 0f);
+
+	public Color clTrans;
+
+	public static Color transParentColor = new Color(1f, 1f, 1f, 0f);
+
+	private Material lineMaterial;
+
+	private void cache(string key, Texture value)
+	{
+		if (cachedTextures.Count > 400)
+		{
+			cachedTextures.Clear();
+		}
+		if (value.width * value.height < GameCanvas.w * GameCanvas.h)
+		{
+			cachedTextures.Add(key, value);
+		}
+	}
+
+	public void translate(int tx, int ty)
+	{
+		tx *= zoomLevel;
+		ty *= zoomLevel;
+		translateX += tx;
+		translateY += ty;
+		isTranslate = true;
+		if (translateX == 0 && translateY == 0)
+		{
+			isTranslate = false;
+		}
+	}
+
+	public void translate(float x, float y)
+	{
+		translateXf += x;
+		translateYf += y;
+		isTranslate = true;
+		if (translateXf == 0f && translateYf == 0f)
+		{
+			isTranslate = false;
+		}
+	}
+
+	public int getTranslateX()
+	{
+		return translateX / zoomLevel;
+	}
+
+	public int getTranslateY()
+	{
+		return translateY / zoomLevel + addYWhenOpenKeyBoard;
+	}
+
+	public void setClip(int x, int y, int w, int h)
+	{
+		x *= zoomLevel;
+		y *= zoomLevel;
+		w *= zoomLevel;
+		h *= zoomLevel;
+		clipTX = translateX;
+		clipTY = translateY;
+		clipX = x;
+		clipY = y;
+		clipW = w;
+		clipH = h;
+		isClip = true;
+	}
+
+	public int getClipX()
+	{
+		return GameScr.cmx;
+	}
+
+	public int getClipY()
+	{
+		return GameScr.cmy;
+	}
+
+	public int getClipWidth()
+	{
+		return GameScr.gW;
+	}
+
+	public int getClipHeight()
+	{
+		return GameScr.gH;
+	}
+
+	public void fillRect(int x, int y, int w, int h, int color, int alpha)
+	{
+		float alpha2 = 0.5f;
+		setColor(color, alpha2);
+		fillRect(x, y, w, h);
+	}
+
+	public void drawLine(int x1, int y1, int x2, int y2)
+	{
+		x1 *= zoomLevel;
+		y1 *= zoomLevel;
+		x2 *= zoomLevel;
+		y2 *= zoomLevel;
+		if (y1 == y2)
+		{
+			if (x1 > x2)
+			{
+				int num = x2;
+				x2 = x1;
+				x1 = num;
+			}
+			fillRect(x1, y1, x2 - x1, 1);
+			return;
+		}
+		if (x1 == x2)
+		{
+			if (y1 > y2)
+			{
+				int num2 = y2;
+				y2 = y1;
+				y1 = num2;
+			}
+			fillRect(x1, y1, 1, y2 - y1);
+			return;
+		}
+		if (isTranslate)
+		{
+			x1 += translateX;
+			y1 += translateY;
+			x2 += translateX;
+			y2 += translateY;
+		}
+		string key = "dl" + r + g + b;
+		Texture2D texture2D = (Texture2D)cachedTextures[key];
+		if (texture2D == null)
+		{
+			texture2D = new Texture2D(1, 1);
+			Color color = new Color(r, g, b);
+			texture2D.SetPixel(0, 0, color);
+			texture2D.Apply();
+			cache(key, texture2D);
+		}
+		Vector2 vector = new Vector2(x1, y1);
+		Vector2 vector2 = new Vector2(x2, y2);
+		Vector2 vector3 = vector2 - vector;
+		float num3 = 57.29578f * Mathf.Atan(vector3.y / vector3.x);
+		if (vector3.x < 0f)
+		{
+			num3 += 180f;
+		}
+		int num4 = (int)Mathf.Ceil(0f);
+		GUIUtility.RotateAroundPivot(num3, vector);
+		int num5 = 0;
+		int num6 = 0;
+		int num7 = 0;
+		int num8 = 0;
+		if (isClip)
+		{
+			num5 = clipX;
+			num6 = clipY;
+			num7 = clipW;
+			num8 = clipH;
+			if (isTranslate)
+			{
+				num5 += clipTX;
+				num6 += clipTY;
+			}
+		}
+		if (isClip)
+		{
+			GUI.BeginGroup(new Rect(num5, num6, num7, num8));
+		}
+		Graphics.DrawTexture(new Rect(vector.x - (float)num5, vector.y - (float)num4 - (float)num6, vector3.magnitude, 1f), texture2D);
+		if (isClip)
+		{
+			GUI.EndGroup();
+		}
+		GUIUtility.RotateAroundPivot(0f - num3, vector);
+	}
+
+	public Color setColorMiniMap(int rgb)
+	{
+		int num = rgb & 0xFF;
+		int num2 = (rgb >> 8) & 0xFF;
+		int num3 = (rgb >> 16) & 0xFF;
+		float num4 = (float)num / 256f;
+		float num5 = (float)num2 / 256f;
+		float num6 = (float)num3 / 256f;
+		return new Color(num6, num5, num4);
+	}
+
+	public float[] getRGB(Color cl)
+	{
+		float num = 256f * cl.r;
+		float num2 = 256f * cl.g;
+		float num3 = 256f * cl.b;
+		return new float[3] { num, num2, num3 };
+	}
+
+	public void drawRect(int x, int y, int w, int h)
+	{
+		int num = 1;
+		fillRect(x, y, w, num);
+		fillRect(x, y, num, h);
+		fillRect(x + w, y, num, h + 1);
+		fillRect(x, y + h, w + 1, num);
+	}
+
+	public void fillRect(int x, int y, int w, int h)
+	{
+		x *= zoomLevel;
+		y *= zoomLevel;
+		w *= zoomLevel;
+		h *= zoomLevel;
+		if (w < 0 || h < 0)
+		{
+			return;
+		}
+		if (isTranslate)
+		{
+			x += translateX;
+			y += translateY;
+		}
+		int num = 1;
+		int num2 = 1;
+		string key = "fr" + num + num2 + r + g + b + a;
+		Texture2D texture2D = (Texture2D)cachedTextures[key];
+		if (texture2D == null)
+		{
+			texture2D = new Texture2D(num, num2);
+			Color color = new Color(r, g, b, a);
+			texture2D.SetPixel(0, 0, color);
+			texture2D.Apply();
+			cache(key, texture2D);
+		}
+		int num3 = 0;
+		int num4 = 0;
+		int num5 = 0;
+		int num6 = 0;
+		if (isClip)
+		{
+			num3 = clipX;
+			num4 = clipY;
+			num5 = clipW;
+			num6 = clipH;
+			if (isTranslate)
+			{
+				num3 += clipTX;
+				num4 += clipTY;
+			}
+		}
+		if (isClip)
+		{
+			GUI.BeginGroup(new Rect(num3, num4, num5, num6));
+		}
+		GUI.DrawTexture(new Rect(x - num3, y - num4, w, h), texture2D);
+		if (isClip)
+		{
+			GUI.EndGroup();
+		}
+	}
+
+	public void setColor(int rgb)
+	{
+		int num = rgb & 0xFF;
+		int num2 = (rgb >> 8) & 0xFF;
+		int num3 = (rgb >> 16) & 0xFF;
+		b = (float)num / 256f;
+		g = (float)num2 / 256f;
+		r = (float)num3 / 256f;
+		a = 255f;
+	}
+
+	public void setColor(Color color)
+	{
+		b = color.b;
+		g = color.g;
+		r = color.r;
+	}
+
+	public void setBgColor(int rgb)
+	{
+		if (rgb != currentBGColor)
+		{
+			currentBGColor = rgb;
+			int num = rgb & 0xFF;
+			int num2 = (rgb >> 8) & 0xFF;
+			int num3 = (rgb >> 16) & 0xFF;
+			b = (float)num / 256f;
+			g = (float)num2 / 256f;
+			r = (float)num3 / 256f;
+			Main.main.GetComponent<Camera>().backgroundColor = new Color(r, g, b);
+		}
+	}
+
+	public void drawString(string s, int x, int y, GUIStyle style)
+	{
+		x *= zoomLevel;
+		y *= zoomLevel;
+		if (isTranslate)
+		{
+			x += translateX;
+			y += translateY;
+		}
+		int num = 0;
+		int num2 = 0;
+		int num3 = 0;
+		int num4 = 0;
+		if (isClip)
+		{
+			num = clipX;
+			num2 = clipY;
+			num3 = clipW;
+			num4 = clipH;
+			if (isTranslate)
+			{
+				num += clipTX;
+				num2 += clipTY;
+			}
+		}
+		if (isClip)
+		{
+			GUI.BeginGroup(new Rect(num, num2, num3, num4));
+		}
+		GUI.Label(new Rect(x - num, y - num2, ScaleGUI.WIDTH, 100f), s, style);
+		if (isClip)
+		{
+			GUI.EndGroup();
+		}
+	}
+
+	public void setColor(int rgb, float alpha)
+	{
+		int num = rgb & 0xFF;
+		int num2 = (rgb >> 8) & 0xFF;
+		int num3 = (rgb >> 16) & 0xFF;
+		b = (float)num / 256f;
+		g = (float)num2 / 256f;
+		r = (float)num3 / 256f;
+		a = alpha;
+	}
+
+	public void drawString(string s, int x, int y, GUIStyle style, int w)
+	{
+		x *= zoomLevel;
+		y *= zoomLevel;
+		if (isTranslate)
+		{
+			x += translateX;
+			y += translateY;
+		}
+		int num = 0;
+		int num2 = 0;
+		int num3 = 0;
+		int num4 = 0;
+		if (isClip)
+		{
+			num = clipX;
+			num2 = clipY;
+			num3 = clipW;
+			num4 = clipH;
+			if (isTranslate)
+			{
+				num += clipTX;
+				num2 += clipTY;
+			}
+		}
+		if (isClip)
+		{
+			GUI.BeginGroup(new Rect(num, num2, num3, num4));
+		}
+		GUI.Label(new Rect(x - num, y - num2 - 4, w, 100f), s, style);
+		if (isClip)
+		{
+			GUI.EndGroup();
+		}
+	}
+
+	private void UpdatePos(int anchor)
+	{
+		Vector2 vector = new Vector2(0f, 0f);
+		switch (anchor)
+		{
+		case 3:
+			vector = new Vector2(size.x / 2f, size.y / 2f);
+			break;
+		case 20:
+			vector = new Vector2(0f, 0f);
+			break;
+		case 17:
+			vector = new Vector2(Screen.width / 2, 0f);
+			break;
+		case 24:
+			vector = new Vector2(Screen.width, 0f);
+			break;
+		case 6:
+			vector = new Vector2(0f, Screen.height / 2);
+			break;
+		case 10:
+			vector = new Vector2(Screen.width, Screen.height / 2);
+			break;
+		case 36:
+			vector = new Vector2(0f, Screen.height);
+			break;
+		case 33:
+			vector = new Vector2(Screen.width / 2, Screen.height);
+			break;
+		case 40:
+			vector = new Vector2(Screen.width, Screen.height);
+			break;
+		}
+		pos = vector + relativePosition;
+		rect = new Rect(pos.x - size.x * 0.5f, pos.y - size.y * 0.5f, size.x, size.y);
+		pivot = new Vector2(rect.xMin + rect.width * 0.5f, rect.yMin + rect.height * 0.5f);
+	}
+
+	public void drawRegion(Image arg0, int x0, int y0, int w0, int h0, int arg5, int x, int y, int arg8)
+	{
+		x *= zoomLevel;
+		y *= zoomLevel;
+		x0 *= zoomLevel;
+		y0 *= zoomLevel;
+		w0 *= zoomLevel;
+		h0 *= zoomLevel;
+		_drawRegion(arg0, x0, y0, w0, h0, arg5, x, y, arg8);
+	}
+
+	public void drawRegion(Image arg0, int x0, int y0, int w0, int h0, int arg5, float x, float y, int arg8)
+	{
+		x *= (float)zoomLevel;
+		y *= (float)zoomLevel;
+		x0 *= zoomLevel;
+		y0 *= zoomLevel;
+		w0 *= zoomLevel;
+		h0 *= zoomLevel;
+		__drawRegion(arg0, x0, y0, w0, h0, arg5, x, y, arg8);
+	}
+
+	public void drawRegion(Image arg0, int x0, int y0, int w0, int h0, int arg5, int x, int y, int arg8, bool isClip)
+	{
+		drawRegion(arg0, x0, y0, w0, h0, arg5, x, y, arg8);
+	}
+
+	public void __drawRegion(Image image, int x0, int y0, int w, int h, int transform, float x, float y, int anchor)
+	{
+		if (image == null)
+		{
+			return;
+		}
+		if (isTranslate)
+		{
+			x += (float)translateX;
+			y += (float)translateY;
+		}
+		float num = w;
+		float num2 = h;
+		float num3 = 0f;
+		float num4 = 0f;
+		float num5 = 0f;
+		float num6 = 0f;
+		float num7 = 1f;
+		float num8 = 0f;
+		int num9 = 1;
+		if ((anchor & HCENTER) == HCENTER)
+		{
+			num5 -= num / 2f;
+		}
+		if ((anchor & VCENTER) == VCENTER)
+		{
+			num6 -= num2 / 2f;
+		}
+		if ((anchor & RIGHT) == RIGHT)
+		{
+			num5 -= num;
+		}
+		if ((anchor & BOTTOM) == BOTTOM)
+		{
+			num6 -= num2;
+		}
+		x += num5;
+		y += num6;
+		int num10 = 0;
+		int num11 = 0;
+		int num12 = 0;
+		int num13 = 0;
+		if (isClip)
+		{
+			num10 = clipX;
+			num11 = clipY;
+			num12 = clipW;
+			num13 = clipH;
+			if (isTranslate)
+			{
+				num10 += clipTX;
+				num11 += clipTY;
+			}
+			Rect r = new Rect(x, y, w, h);
+			Rect rect = intersectRect(r2: new Rect(num10, num11, num12, num13), r1: r);
+			if (rect.width <= 0f || rect.height <= 0f)
+			{
+				return;
+			}
+			num = rect.width;
+			num2 = rect.height;
+			num3 = rect.x - r.x;
+			num4 = rect.y - r.y;
+		}
+		float num14 = 0f;
+		float num15 = 0f;
+		switch (transform)
+		{
+		case 2:
+			num14 += num;
+			num7 = -1f;
+			if (isClip)
+			{
+				if ((float)num10 > x)
+				{
+					num8 = 0f - num3;
+				}
+				else if ((float)(num10 + num12) < x + (float)w)
+				{
+					num8 = 0f - ((float)(num10 + num12) - x - (float)w);
+				}
+			}
+			break;
+		case 1:
+			num9 = -1;
+			num15 += num2;
+			break;
+		case 3:
+			num9 = -1;
+			num15 += num2;
+			num7 = -1f;
+			num14 += num;
+			break;
+		}
+		int num16 = 0;
+		int num17 = 0;
+		if (transform == 5 || transform == 6 || transform == 4 || transform == 7)
+		{
+			matrixBackup = GUI.matrix;
+			size = new Vector2(w, h);
+			relativePosition = new Vector2(x, y);
+			UpdatePos(3);
+			switch (transform)
+			{
+			case 6:
+				UpdatePos(3);
+				break;
+			case 5:
+				size = new Vector2(w, h);
+				UpdatePos(3);
+				break;
+			}
+			switch (transform)
+			{
+			case 5:
+				GUIUtility.RotateAroundPivot(90f, pivot);
+				break;
+			case 6:
+				GUIUtility.RotateAroundPivot(270f, pivot);
+				break;
+			case 4:
+				GUIUtility.RotateAroundPivot(270f, pivot);
+				num14 += num;
+				num7 = -1f;
+				if (isClip)
+				{
+					if ((float)num10 > x)
+					{
+						num8 = 0f - num3;
+					}
+					else if ((float)(num10 + num12) < x + (float)w)
+					{
+						num8 = 0f - ((float)(num10 + num12) - x - (float)w);
+					}
+				}
+				break;
+			case 7:
+				GUIUtility.RotateAroundPivot(270f, pivot);
+				num9 = -1;
+				num15 += num2;
+				break;
+			}
+		}
+		Graphics.DrawTexture(new Rect(x + num3 + num14 + (float)num16, y + num4 + (float)num17 + num15, num * num7, num2 * (float)num9), image.texture, new Rect(((float)x0 + num3 + num8) / (float)image.texture.width, ((float)image.texture.height - num2 - ((float)y0 + num4)) / (float)image.texture.height, num / (float)image.texture.width, num2 / (float)image.texture.height), 0, 0, 0, 0);
+		if (transform == 5 || transform == 6 || transform == 4 || transform == 7)
+		{
+			GUI.matrix = matrixBackup;
+		}
+	}
+
+	public void _drawRegion(Image image, float x0, float y0, int w, int h, int transform, int x, int y, int anchor)
+	{
+		if (image == null)
+		{
+			return;
+		}
+		if (isTranslate)
+		{
+			x += translateX;
+			y += translateY;
+		}
+		float num = w;
+		float num2 = h;
+		float num3 = 0f;
+		float num4 = 0f;
+		float num5 = 0f;
+		float num6 = 0f;
+		float num7 = 1f;
+		float num8 = 0f;
+		int num9 = 1;
+		if ((anchor & HCENTER) == HCENTER)
+		{
+			num5 -= num / 2f;
+		}
+		if ((anchor & VCENTER) == VCENTER)
+		{
+			num6 -= num2 / 2f;
+		}
+		if ((anchor & RIGHT) == RIGHT)
+		{
+			num5 -= num;
+		}
+		if ((anchor & BOTTOM) == BOTTOM)
+		{
+			num6 -= num2;
+		}
+		x += (int)num5;
+		y += (int)num6;
+		int num10 = 0;
+		int num11 = 0;
+		int num12 = 0;
+		int num13 = 0;
+		if (isClip)
+		{
+			num10 = clipX;
+			num11 = clipY;
+			num12 = clipW;
+			num13 = clipH;
+			if (isTranslate)
+			{
+				num10 += clipTX;
+				num11 += clipTY;
+			}
+			Rect r = new Rect(x, y, w, h);
+			Rect rect = intersectRect(r2: new Rect(num10, num11, num12, num13), r1: r);
+			if (rect.width <= 0f || rect.height <= 0f)
+			{
+				return;
+			}
+			num = rect.width;
+			num2 = rect.height;
+			num3 = rect.x - r.x;
+			num4 = rect.y - r.y;
+		}
+		float num14 = 0f;
+		float num15 = 0f;
+		switch (transform)
+		{
+		case 2:
+			num14 += num;
+			num7 = -1f;
+			if (isClip)
+			{
+				if (num10 > x)
+				{
+					num8 = 0f - num3;
+				}
+				else if (num10 + num12 < x + w)
+				{
+					num8 = -(num10 + num12 - x - w);
+				}
+			}
+			break;
+		case 1:
+			num9 = -1;
+			num15 += num2;
+			break;
+		case 3:
+			num9 = -1;
+			num15 += num2;
+			num7 = -1f;
+			num14 += num;
+			break;
+		}
+		int num16 = 0;
+		int num17 = 0;
+		if (transform == 5 || transform == 6 || transform == 4 || transform == 7)
+		{
+			matrixBackup = GUI.matrix;
+			size = new Vector2(w, h);
+			relativePosition = new Vector2(x, y);
+			UpdatePos(3);
+			switch (transform)
+			{
+			case 6:
+				UpdatePos(3);
+				break;
+			case 5:
+				size = new Vector2(w, h);
+				UpdatePos(3);
+				break;
+			}
+			switch (transform)
+			{
+			case 5:
+				GUIUtility.RotateAroundPivot(90f, pivot);
+				break;
+			case 6:
+				GUIUtility.RotateAroundPivot(270f, pivot);
+				break;
+			case 4:
+				GUIUtility.RotateAroundPivot(270f, pivot);
+				num14 += num;
+				num7 = -1f;
+				if (isClip)
+				{
+					if (num10 > x)
+					{
+						num8 = 0f - num3;
+					}
+					else if (num10 + num12 < x + w)
+					{
+						num8 = -(num10 + num12 - x - w);
+					}
+				}
+				break;
+			case 7:
+				GUIUtility.RotateAroundPivot(270f, pivot);
+				num9 = -1;
+				num15 += num2;
+				break;
+			}
+		}
+		Graphics.DrawTexture(new Rect((float)x + num3 + num14 + (float)num16, (float)y + num4 + (float)num17 + num15, num * num7, num2 * (float)num9), image.texture, new Rect((x0 + num3 + num8) / (float)image.texture.width, ((float)image.texture.height - num2 - (y0 + num4)) / (float)image.texture.height, num / (float)image.texture.width, num2 / (float)image.texture.height), 0, 0, 0, 0);
+		if (transform == 5 || transform == 6 || transform == 4 || transform == 7)
+		{
+			GUI.matrix = matrixBackup;
+		}
+	}
+
+	public void drawRegionGui(Image image, float x0, float y0, int w, int h, int transform, float x, float y, int anchor)
+	{
+		GUI.color = setColorMiniMap(807956);
+		x *= (float)zoomLevel;
+		y *= (float)zoomLevel;
+		x0 *= (float)zoomLevel;
+		y0 *= (float)zoomLevel;
+		w *= zoomLevel;
+		h *= zoomLevel;
+	}
+
+	public void drawRegion2(Image image, float x0, float y0, int w, int h, int transform, int x, int y, int anchor)
+	{
+		GUI.color = image.colorBlend;
+		if (isTranslate)
+		{
+			x += translateX;
+			y += translateY;
+		}
+		string key = "dg" + x0 + y0 + w + h + transform + image.GetHashCode();
+		Texture2D texture2D = (Texture2D)cachedTextures[key];
+		if (texture2D == null)
+		{
+			Image image2 = Image.createImage(image, (int)x0, (int)y0, w, h, transform);
+			texture2D = image2.texture;
+			cache(key, texture2D);
+		}
+		int num = 0;
+		int num2 = 0;
+		int num3 = 0;
+		int num4 = 0;
+		float num5 = w;
+		float num6 = h;
+		float num7 = 0f;
+		float num8 = 0f;
+		if ((anchor & HCENTER) == HCENTER)
+		{
+			num7 -= num5 / 2f;
+		}
+		if ((anchor & VCENTER) == VCENTER)
+		{
+			num8 -= num6 / 2f;
+		}
+		if ((anchor & RIGHT) == RIGHT)
+		{
+			num7 -= num5;
+		}
+		if ((anchor & BOTTOM) == BOTTOM)
+		{
+			num8 -= num6;
+		}
+		x += (int)num7;
+		y += (int)num8;
+		if (isClip)
+		{
+			num = clipX;
+			num2 = clipY;
+			num3 = clipW;
+			num4 = clipH;
+			if (isTranslate)
+			{
+				num += clipTX;
+				num2 += clipTY;
+			}
+		}
+		if (isClip)
+		{
+			GUI.BeginGroup(new Rect(num, num2, num3, num4));
+		}
+		GUI.DrawTexture(new Rect(x - num, y - num2, w, h), texture2D);
+		if (isClip)
+		{
+			GUI.EndGroup();
+		}
+		GUI.color = new Color(1f, 1f, 1f, 1f);
+	}
+
+	public void drawImagaByDrawTexture(Image image, float x, float y)
+	{
+		x *= (float)zoomLevel;
+		y *= (float)zoomLevel;
+		GUI.DrawTexture(new Rect(x + (float)translateX, y + (float)translateY, image.getRealImageWidth(), image.getRealImageHeight()), image.texture);
+	}
+
+	public void drawImage(Image image, int x, int y, int anchor)
+	{
+		if (image != null)
+		{
+			drawRegion(image, 0, 0, getImageWidth(image), getImageHeight(image), 0, x, y, anchor);
+		}
+	}
+
+	public void drawImageFog(Image image, int x, int y, int anchor)
+	{
+		if (image != null)
+		{
+			drawRegion(image, 0, 0, image.texture.width, image.texture.height, 0, x, y, anchor);
+		}
+	}
+
+	public void drawImage(Image image, int x, int y)
+	{
+		if (image != null)
+		{
+			drawRegion(image, 0, 0, getImageWidth(image), getImageHeight(image), 0, x, y, TOP | LEFT);
+		}
+	}
+
+	public void drawImage(Image image, float x, float y, int anchor)
+	{
+		if (image != null)
+		{
+			drawRegion(image, 0, 0, getImageWidth(image), getImageHeight(image), 0, x, y, anchor);
+		}
+	}
+
+	public void drawRoundRect(int x, int y, int w, int h, int arcWidth, int arcHeight)
+	{
+		drawRect(x, y, w, h);
+	}
+
+	public void fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
+	{
+		fillRect(x, y, width, height);
+	}
+
+	public void reset()
+	{
+		isClip = false;
+		isTranslate = false;
+		translateX = 0;
+		translateY = 0;
+	}
+
+	public Rect intersectRect(Rect r1, Rect r2)
+	{
+		float num = r1.x;
+		float num2 = r1.y;
+		float x = r2.x;
+		float y = r2.y;
+		float num3 = num;
+		num3 += r1.width;
+		float num4 = num2;
+		num4 += r1.height;
+		float num5 = x;
+		num5 += r2.width;
+		float num6 = y;
+		num6 += r2.height;
+		if (num < x)
+		{
+			num = x;
+		}
+		if (num2 < y)
+		{
+			num2 = y;
+		}
+		if (num3 > num5)
+		{
+			num3 = num5;
+		}
+		if (num4 > num6)
+		{
+			num4 = num6;
+		}
+		num3 -= num;
+		num4 -= num2;
+		if (num3 < -30000f)
+		{
+			num3 = -30000f;
+		}
+		if (num4 < -30000f)
+		{
+			num4 = -30000f;
+		}
+		return new Rect(num, num2, (int)num3, (int)num4);
+	}
+
+	public void drawImageScale(Image image, int x, int y, int w, int h, int tranform)
+	{
+		GUI.color = Color.red;
+		x *= zoomLevel;
+		y *= zoomLevel;
+		w *= zoomLevel;
+		h *= zoomLevel;
+		if (image != null)
+		{
+			Graphics.DrawTexture(new Rect(x + translateX, y + translateY, (tranform != 0) ? (-w) : w, h), image.texture);
+		}
+	}
+
+	public void drawImageSimple(Image image, int x, int y)
+	{
+		x *= zoomLevel;
+		y *= zoomLevel;
+		if (image != null)
+		{
+			Graphics.DrawTexture(new Rect(x, y, image.w, image.h), image.texture);
+		}
+	}
+
+	public static int getImageWidth(Image image)
+	{
+		return image.getWidth();
+	}
+
+	public static int getImageHeight(Image image)
+	{
+		return image.getHeight();
+	}
+
+	public static bool isNotTranColor(Color color)
+	{
+		if (color == Color.clear || color == transParentColor)
+		{
+			return false;
+		}
+		return true;
+	}
+
+	public static Image blend(Image img0, float level, int rgb)
+	{
+		int num = rgb & 0xFF;
+		int num2 = (rgb >> 8) & 0xFF;
+		int num3 = (rgb >> 16) & 0xFF;
+		float num4 = (float)num / 256f;
+		float num5 = (float)num2 / 256f;
+		float num6 = (float)num3 / 256f;
+		Color color = new Color(num6, num5, num4);
+		Color[] pixels = img0.texture.GetPixels();
+		float num7 = color.r;
+		float num8 = color.g;
+		float num9 = color.b;
+		for (int i = 0; i < pixels.Length; i++)
+		{
+			Color color2 = pixels[i];
+			if (isNotTranColor(color2))
+			{
+				float num10 = (num7 - color2.r) * level + color2.r;
+				float num11 = (num8 - color2.g) * level + color2.g;
+				float num12 = (num9 - color2.b) * level + color2.b;
+				if (num10 > 255f)
+				{
+					num10 = 255f;
+				}
+				if (num10 < 0f)
+				{
+					num10 = 0f;
+				}
+				if (num11 > 255f)
+				{
+					num11 = 255f;
+				}
+				if (num11 < 0f)
+				{
+					num11 = 0f;
+				}
+				if (num12 < 0f)
+				{
+					num12 = 0f;
+				}
+				if (num12 > 255f)
+				{
+					num12 = 255f;
+				}
+				pixels[i].r = num10;
+				pixels[i].g = num11;
+				pixels[i].b = num12;
+			}
+		}
+		Image image = Image.createImage(img0.getRealImageWidth(), img0.getRealImageHeight());
+		image.texture.SetPixels(pixels);
+		Image.setTextureQuality(image.texture);
+		image.texture.Apply();
+		Cout.LogError2("BLEND ----------------------------------------------------");
+		return image;
+	}
+
+	public static Color setColorObj(int rgb)
+	{
+		int num = rgb & 0xFF;
+		int num2 = (rgb >> 8) & 0xFF;
+		int num3 = (rgb >> 16) & 0xFF;
+		float num4 = (float)num / 256f;
+		float num5 = (float)num2 / 256f;
+		float num6 = (float)num3 / 256f;
+		return new Color(num6, num5, num4);
+	}
+
+	public void fillTrans(Image imgTrans, int x, int y, int w, int h)
+	{
+		setColor(0, 0.5f);
+		fillRect(x * zoomLevel, y * zoomLevel, w * zoomLevel, h * zoomLevel);
+	}
+
+	public static int blendColor(float level, int color, int colorBlend)
+	{
+		Color color2 = setColorObj(colorBlend);
+		float num = color2.r * 255f;
+		float num2 = color2.g * 255f;
+		float num3 = color2.b * 255f;
+		Color color3 = setColorObj(color);
+		float num4 = (num + color3.r) * level + color3.r;
+		float num5 = (num2 + color3.g) * level + color3.g;
+		float num6 = (num3 + color3.b) * level + color3.b;
+		if (num4 > 255f)
+		{
+			num4 = 255f;
+		}
+		if (num4 < 0f)
+		{
+			num4 = 0f;
+		}
+		if (num5 > 255f)
+		{
+			num5 = 255f;
+		}
+		if (num5 < 0f)
+		{
+			num5 = 0f;
+		}
+		if (num6 < 0f)
+		{
+			num6 = 0f;
+		}
+		if (num6 > 255f)
+		{
+			num6 = 255f;
+		}
+		return (int)num6 & (255 + ((int)num5 << 8)) & (255 + ((int)num4 << 16)) & 0xFF;
+	}
+
+	public static int getIntByColor(Color cl)
+	{
+		float num = cl.r * 255f;
+		float num2 = cl.b * 255f;
+		float num3 = cl.g * 255f;
+		return (((int)num & 0xFF) << 16) | (((int)num3 & 0xFF) << 8) | ((int)num2 & 0xFF);
+	}
+
+	public static int getRealImageWidth(Image img)
+	{
+		return img.w;
+	}
+
+	public static int getRealImageHeight(Image img)
+	{
+		return img.h;
+	}
+
+	public void fillArg(int i, int j, int k, int l, int m, int n)
+	{
+		fillRect(i * zoomLevel, j * zoomLevel, k * zoomLevel, l * zoomLevel);
+	}
+
+	public void CreateLineMaterial()
+	{
+		if (!lineMaterial)
+		{
+			lineMaterial = new Material("Shader \"Lines/Colored Blended\" {SubShader { Pass {  Blend SrcAlpha OneMinusSrcAlpha  ZWrite Off Cull Off Fog { Mode Off }  BindChannels { Bind \"vertex\", vertex Bind \"color\", color }} } }");
+			lineMaterial.hideFlags = HideFlags.HideAndDontSave;
+			lineMaterial.shader.hideFlags = HideFlags.HideAndDontSave;
+		}
+	}
+
+	public void drawlineGL(MyVector totalLine)
+	{
+		lineMaterial.SetPass(0);
+		GL.PushMatrix();
+		GL.Begin(1);
+		for (int i = 0; i < totalLine.size(); i++)
+		{
+			mLine mLine2 = (mLine)totalLine.elementAt(i);
+			GL.Color(new Color(mLine2.r, mLine2.g, mLine2.b, mLine2.a));
+			int num = mLine2.x1 * zoomLevel;
+			int num2 = mLine2.y1 * zoomLevel;
+			int num3 = mLine2.x2 * zoomLevel;
+			int num4 = mLine2.y2 * zoomLevel;
+			if (isTranslate)
+			{
+				num += translateX;
+				num2 += translateY;
+				num3 += translateX;
+				num4 += translateY;
+			}
+			for (int j = 0; j < zoomLevel; j++)
+			{
+				GL.Vertex(new Vector2(num + j, num2 + j));
+				GL.Vertex(new Vector2(num3 + j, num4 + j));
+				if (j > 0)
+				{
+					GL.Vertex(new Vector2(num + j, num2));
+					GL.Vertex(new Vector2(num3 + j, num4));
+					GL.Vertex(new Vector2(num, num2 + j));
+					GL.Vertex(new Vector2(num3, num4 + j));
+				}
+			}
+		}
+		GL.End();
+		GL.PopMatrix();
+		totalLine.removeAllElements();
+	}
+
+	public void drawLine(mGraphics g, int x, int y, int xTo, int yTo, int nLine, int color)
+	{
+		MyVector myVector = new MyVector();
+		for (int i = 0; i < nLine; i++)
+		{
+			myVector.addElement(new mLine(x, y, xTo + i, yTo + i, color));
+		}
+		g.drawlineGL(myVector);
+	}
+
+	internal void drawRegion(Small img, int p1, int p2, int p3, int p4, int transform, int x, int y, int anchor)
+	{
+		throw new NotImplementedException();
+	}
+}
+
+
+if (skillPaint != null && skillInfoPaint() != null && indexSkill < skillInfoPaint().Length && isPunchKickSkill() && (me || (!me && cx >= GameScr.cmx && cx <= GameScr.cmx + GameCanvas.w)) && GameCanvas.gameTick % 5 == 0)
+		{
+			if (cf == 9 || cf == 10 || cf == 11)
+			{
+				SoundMn.gI().charPunch(isKick: true, (!me) ? 0.05f : 0.1f);
+			}
+			else
+			{
+				SoundMn.gI().charPunch(isKick: false, (!me) ? 0.05f : 0.1f);
+			}
+		}
+
+
+
+	public virtual void update()
+	{
+		if (isHide || isMabuHold)
+		{
+			return;
+		}
+		if ((!isCopy && clevel < 14) || statusMe == 1 || statusMe == 6)
+		{
+		}
+		if (petFollow != null)
+		{
+			if (GameCanvas.gameTick % 3 == 0)
+			{
+				if (myCharz().cdir == 1)
+				{
+					petFollow.cmtoX = cx - 20;
+				}
+				if (myCharz().cdir == -1)
+				{
+					petFollow.cmtoX = cx + 20;
+				}
+				petFollow.cmtoY = cy - 40;
+				if (petFollow.cmx > cx)
+				{
+					petFollow.dir = -1;
+				}
+				else
+				{
+					petFollow.dir = 1;
+				}
+				if (petFollow.cmtoX < 100)
+				{
+					petFollow.cmtoX = 100;
+				}
+				if (petFollow.cmtoX > TileMap.pxw - 100)
+				{
+					petFollow.cmtoX = TileMap.pxw - 100;
+				}
+			}
+			petFollow.update();
+		}
+		if (!me && cHP <= 0 && clanID != -100 && statusMe != 14 && statusMe != 5)
+		{
+			startDie((short)cx, (short)cy);
+		}
+		if (isInjureHp)
+		{
+			twHp++;
+			if (twHp == 20)
+			{
+				twHp = 0;
+				isInjureHp = false;
+			}
+		}
+		else if (dHP > cHP)
+		{
+			int num = dHP - cHP >> 1;
+			if (num < 1)
+			{
+				num = 1;
+			}
+			dHP -= num;
+		}
+		else
+		{
+			dHP = cHP;
+		}
+		if (secondPower != 0)
+		{
+			currS = mSystem.currentTimeMillis();
+			if (currS - lastS >= 1000)
+			{
+				lastS = mSystem.currentTimeMillis();
+				secondPower--;
+			}
+		}
+		if (!me && GameScr.notPaint)
+		{
+			return;
+		}
+		if (sleepEff && GameCanvas.gameTick % 10 == 0)
+		{
+			EffecMn.addEff(new Effect(41, cx, cy, 3, 1, 1));
+		}
+		if (huytSao)
+		{
+			huytSao = false;
+			EffecMn.addEff(new Effect(39, cx, cy, 3, 3, 1));
+		}
+		if (blindEff && GameCanvas.gameTick % 5 == 0)
+		{
+			ServerEffect.addServerEffect(113, this, 1);
+		}
+		if (protectEff)
+		{
+			int y = cH_new + 73;
+			if (GameCanvas.gameTick % 5 == 0)
+			{
+				eProtect = new Effect(33, cx, y, 3, 3, 1);
+			}
+			if (eProtect != null)
+			{
+				eProtect.update();
+				eProtect.x = cx;
+				eProtect.y = y;
+			}
+		}
+		if (charFocus != null && charFocus.cy < 0)
+		{
+			charFocus = null;
+		}
+		if (isFusion)
+		{
+			tFusion++;
+		}
+		if (isNhapThe)
+		{
+			int num2 = 0;
+			if (GameCanvas.gameTick % 25 == 0)
+			{
+				num2 = 114;
+				ServerEffect.addServerEffect(num2, this, 1);
+			}
+		}
+		if (isSetPos)
+		{
+			tpos++;
+			if (tpos != 1)
+			{
+				return;
+			}
+			tpos = 0;
+			isSetPos = false;
+			cx = xPos;
+			cy = yPos;
+			cp1 = (cp2 = (cp3 = 0));
+			if (typePos == 1)
+			{
+				if (me)
+				{
+					cxSend = cx;
+					cySend = cy;
+				}
+				currentMovePoint = null;
+				telePortSkill = false;
+				ServerEffect.addServerEffect(173, cx, cy, 1);
+			}
+			else
+			{
+				ServerEffect.addServerEffect(60, cx, cy, 1);
+			}
+			if ((TileMap.tileTypeAtPixel(cx, cy) & 2) == 2)
+			{
+				statusMe = 1;
+			}
+			else
+			{
+				statusMe = 4;
+			}
+			return;
+		}
+		soundUpdate();
+		if (stone)
+		{
+			return;
+		}
+		if (isFreez)
+		{
+			if (GameCanvas.gameTick % 5 == 0)
+			{
+				ServerEffect.addServerEffect(113, cx, cy, 1);
+			}
+			cf = 23;
+			long num3 = mSystem.currentTimeMillis();
+			if (num3 - lastFreez >= 1000)
+			{
+				freezSeconds--;
+				lastFreez = num3;
+				if (freezSeconds < 0)
+				{
+					isFreez = false;
+					seconds = 0;
+					if (me)
+					{
+						myCharz().isLockMove = false;
+						GameScr.gI().dem = 0;
+						GameScr.gI().isFreez = false;
+					}
+				}
+			}
+			if (TileMap.tileTypeAt(cx / TileMap.size, cy / TileMap.size) == 0)
+			{
+				ty++;
+				wt++;
+				fy += ((!wy) ? 1 : (-1));
+				if (wt == 10)
+				{
+					wt = 0;
+					wy = !wy;
+				}
+			}
+			return;
+		}
+		if (isWaitMonkey)
+		{
+			isLockMove = true;
+			cf = 17;
+			if (GameCanvas.gameTick % 5 == 0)
+			{
+				ServerEffect.addServerEffect(154, cx, cy - 10, 2);
+			}
+			if (GameCanvas.gameTick % 5 == 0)
+			{
+				ServerEffect.addServerEffect(1, cx, cy + 10, 1);
+			}
+			chargeCount++;
+			if (chargeCount == 500)
+			{
+				isWaitMonkey = false;
+				isLockMove = false;
+			}
+			return;
+		}
+		if (isStandAndCharge)
+		{
+			chargeCount++;
+			bool flag = !TileMap.tileTypeAt(myCharz().cx, myCharz().cy, 2);
+			updateEffect();
+			updateSkillPaint();
+			moveFast = null;
+			currentMovePoint = null;
+			cf = 17;
+			if (flag && cgender != 2)
+			{
+				cf = 12;
+			}
+			if (cgender == 2)
+			{
+				if (GameCanvas.gameTick % 3 == 0)
+				{
+					ServerEffect.addServerEffect(154, cx, cy - ch / 2 + 10, 1);
+				}
+				if (GameCanvas.gameTick % 5 == 0)
+				{
+					ServerEffect.addServerEffect(114, cx + Res.random(-20, 20), cy + Res.random(-20, 20), 1);
+				}
+			}
+			if (cgender == 1)
+			{
+				if (GameCanvas.gameTick % 4 == 0)
+				{
+				}
+				if (GameCanvas.gameTick % 2 == 0)
+				{
+					if (cdir == 1)
+					{
+						ServerEffect.addServerEffect(70, cx - 18, cy - ch / 2 + 8, 1);
+						ServerEffect.addServerEffect(70, cx + 23, cy - ch / 2 + 15, 1);
+					}
+					else
+					{
+						ServerEffect.addServerEffect(70, cx + 18, cy - ch / 2 + 8, 1);
+						ServerEffect.addServerEffect(70, cx - 23, cy - ch / 2 + 15, 1);
+					}
+				}
+			}
+			cur = mSystem.currentTimeMillis();
+			if (cur - last > seconds || cur - last > 10000)
+			{
+				stopUseChargeSkill();
+				if (me)
+				{
+					GameScr.gI().auto = 0;
+					if (cgender == 2)
+					{
+						myCharz().setAutoSkillPaint(GameScr.sks[myCharz().myskill.skillId], flag ? 1 : 0);
+						Service.gI().skill_not_focus(8);
+					}
+					if (cgender == 1)
+					{
+						Res.outz("set skipp paint");
+						isCreateDark = true;
+						myCharz().setSkillPaint(GameScr.sks[myCharz().myskill.skillId], flag ? 1 : 0);
+					}
+				}
+				else if (cgender == 2)
+				{
+					setAutoSkillPaint(GameScr.sks[skillTemplateId], flag ? 1 : 0);
+				}
+				if (cgender == 2 && statusMe != 14 && statusMe != 5)
+				{
+					GameScr.gI().activeSuperPower(cx, cy);
+				}
+			}
+			chargeCount++;
+			if (chargeCount == 500)
+			{
+				stopUseChargeSkill();
+			}
+			return;
+		}
+		if (isFlyAndCharge)
+		{
+			updateEffect();
+			updateSkillPaint();
+			moveFast = null;
+			currentMovePoint = null;
+			posDisY++;
+			if (TileMap.tileTypeAt(cx, cy - ch, 8192))
+			{
+				stopUseChargeSkill();
+				return;
+			}
+			if (posDisY == 20)
+			{
+				last = mSystem.currentTimeMillis();
+			}
+			if (posDisY > 20)
+			{
+				cur = mSystem.currentTimeMillis();
+				if (cur - last > seconds || cur - last > 10000)
+				{
+					isFlyAndCharge = false;
+					if (me)
+					{
+						isCreateDark = true;
+						bool flag2 = TileMap.tileTypeAt(myCharz().cx, myCharz().cy, 2);
+						isUseSkillAfterCharge = true;
+						myCharz().setSkillPaint(GameScr.sks[myCharz().myskill.skillId], (!flag2) ? 1 : 0);
+					}
+					return;
+				}
+				cf = 32;
+				if (cgender == 0 && GameCanvas.gameTick % 3 == 0)
+				{
+					ServerEffect.addServerEffect(153, cx, cy - ch, 2);
+				}
+				chargeCount++;
+				if (chargeCount == 500)
+				{
+					stopUseChargeSkill();
+				}
+			}
+			else
+			{
+				if (statusMe != 14)
+				{
+					statusMe = 3;
+				}
+				cvy = -3;
+				cy += cvy;
+				cf = 7;
+			}
+			return;
+		}
+		if (me && GameCanvas.isTouch)
+		{
+			if (charFocus != null && charFocus.charID >= 0 && charFocus.cx > 100 && charFocus.cx < TileMap.pxw - 100 && isInEnterOnlinePoint() == null && isInEnterOfflinePoint() == null && !isAttacPlayerStatus() && TileMap.mapID != 51 && TileMap.mapID != 52 && GameCanvas.panel.vPlayerMenu.size() > 0 && GameScr.gI().popUpYesNo == null)
+			{
+				int num4 = Math.abs(cx - charFocus.cx);
+				int num5 = Math.abs(cy - charFocus.cy);
+				if (num4 < 60 && num5 < 40)
+				{
+					if (cmdMenu == null)
+					{
+						cmdMenu = new Command(mResources.MENU, 11111);
+						cmdMenu.isPlaySoundButton = false;
+					}
+					cmdMenu.x = charFocus.cx - GameScr.cmx;
+					cmdMenu.y = charFocus.cy - charFocus.ch - 30 - GameScr.cmy;
+				}
+				else
+				{
+					cmdMenu = null;
+				}
+			}
+			else
+			{
+				cmdMenu = null;
+			}
+		}
+		if (isShadown)
+		{
+			updateShadown();
+		}
+		if (isTeleport)
+		{
+			return;
+		}
+		if (chatInfo != null)
+		{
+			chatInfo.update();
+		}
+		if (shadowLife > 0)
+		{
+			shadowLife--;
+		}
+		if (resultTest > 0 && GameCanvas.gameTick % 2 == 0)
+		{
+			resultTest = (sbyte)(resultTest - 1);
+			if (resultTest == 30 || resultTest == 60)
+			{
+				resultTest = 0;
+			}
+		}
+		updateSkillPaint();
+		if (mobMe != null)
+		{
+			updateMobMe();
+		}
+		if (arr != null)
+		{
+			arr.update();
+		}
+		if (dart != null)
+		{
+			dart.update();
+		}
+		updateEffect();
+		if (holdEffID != 0)
+		{
+			if (GameCanvas.gameTick % 5 == 0)
+			{
+				EffecMn.addEff(new Effect(32, cx, cy + 24, 3, 5, 1));
+			}
+		}
+		else
+		{
+			if (blindEff || sleepEff)
+			{
+				return;
+			}
+			if (holder)
+			{
+				if (charHold != null && (charHold.statusMe == 14 || charHold.statusMe == 5))
+				{
+					removeHoleEff();
+				}
+				if (mobHold != null && mobHold.status == 1)
+				{
+					removeHoleEff();
+				}
+				if (me && statusMe == 2 && currentMovePoint != null)
+				{
+					holder = false;
+					charHold = null;
+					mobHold = null;
+				}
+				if (TileMap.tileTypeAt(cx, cy, 2))
+				{
+					cf = 16;
+				}
+				else
+				{
+					cf = 31;
+				}
+				return;
+			}
+			if (cHP > 0)
+			{
+				for (int i = 0; i < vEff.size(); i++)
+				{
+					EffectChar effectChar = (EffectChar)vEff.elementAt(i);
+					if (effectChar.template.type == 0 || effectChar.template.type == 12)
+					{
+						if (GameCanvas.isEff1)
+						{
+							cHP += effectChar.param;
+							cMP += effectChar.param;
+						}
+					}
+					else if (effectChar.template.type == 4 || effectChar.template.type == 17)
+					{
+						if (GameCanvas.isEff1)
+						{
+							cHP += effectChar.param;
+						}
+					}
+					else if (effectChar.template.type == 13 && GameCanvas.isEff1)
+					{
+						cHP -= cHPFull * 3 / 100;
+						if (cHP < 1)
+						{
+							cHP = 1;
+						}
+					}
+				}
+				if (eff5BuffHp > 0 && GameCanvas.isEff2)
+				{
+					cHP += eff5BuffHp;
+				}
+				if (eff5BuffMp > 0 && GameCanvas.isEff2)
+				{
+					cMP += eff5BuffMp;
+				}
+				if (cHP > cHPFull)
+				{
+					cHP = cHPFull;
+				}
+				if (cMP > cMPFull)
+				{
+					cMP = cMPFull;
+				}
+			}
+			if (cmtoChar)
+			{
+				GameScr.cmtoX = cx - GameScr.gW2;
+				GameScr.cmtoY = cy - GameScr.gH23;
+				if (!GameCanvas.isTouchControl)
+				{
+					GameScr.cmtoX += GameScr.gW6 * cdir;
+				}
+			}
+			tick = (tick + 1) % 100;
+			if (me)
+			{
+				if (charFocus != null && !GameScr.vCharInMap.contains(charFocus))
+				{
+					charFocus = null;
+				}
+				if (cx < 10)
+				{
+					cvx = 0;
+					cx = 10;
+				}
+				else if (cx > TileMap.pxw - 10)
+				{
+					cx = TileMap.pxw - 10;
+					cvx = 0;
+				}
+				if (me && !ischangingMap && isInWaypoint())
+				{
+					Service.gI().charMove();
+					if (TileMap.isTrainingMap())
+					{
+						Service.gI().getMapOffline();
+						ischangingMap = true;
+					}
+					else
+					{
+						Service.gI().requestChangeMap();
+					}
+					isLockKey = true;
+					ischangingMap = true;
+					GameCanvas.clearKeyHold();
+					GameCanvas.clearKeyPressed();
+					InfoDlg.showWait();
+					return;
+				}
+				if (statusMe != 4 && Res.abs(cx - cxSend) + Res.abs(cy - cySend) >= 70 && cy - cySend <= 0 && me)
+				{
+					Service.gI().charMove();
+				}
+				if (isLockMove)
+				{
+					currentMovePoint = null;
+				}
+				if (currentMovePoint != null)
+				{
+					if (abs(cx - currentMovePoint.xEnd) <= 16 && abs(cy - currentMovePoint.yEnd) <= 16)
+					{
+						cx = (currentMovePoint.xEnd + cx) / 2;
+						cy = currentMovePoint.yEnd;
+						currentMovePoint = null;
+						GameScr.instance.clickMoving = false;
+						checkPerformEndMovePointAction();
+						cvx = (cvy = 0);
+						if ((TileMap.tileTypeAtPixel(cx, cy) & 2) == 2)
+						{
+							statusMe = 1;
+						}
+						else
+						{
+							setCharFallFromJump();
+						}
+						Service.gI().charMove();
+					}
+					else
+					{
+						cdir = ((currentMovePoint.xEnd > cx) ? 1 : (-1));
+						if (TileMap.tileTypeAt(cx, cy, 2))
+						{
+							statusMe = 2;
+							if (currentMovePoint != null)
+							{
+								cvx = cspeed * cdir;
+								cvy = 0;
+							}
+							if (abs(cx - currentMovePoint.xEnd) <= 10)
+							{
+								if (currentMovePoint.yEnd > cy)
+								{
+									bool flag3 = false;
+									sbyte b = 1;
+									b = (sbyte)((cdir == 1) ? 1 : (-1));
+									for (int j = 0; j < 2; j++)
+									{
+										if (TileMap.tileTypeAt(currentMovePoint.xEnd + chw * b, cy + chh * j, 2))
+										{
+											flag3 = true;
+											break;
+										}
+									}
+									if (flag3)
+									{
+										currentMovePoint = null;
+										GameScr.instance.clickMoving = false;
+										statusMe = 1;
+										cvx = (cvy = 0);
+										checkPerformEndMovePointAction();
+									}
+									else
+									{
+										SoundMn.gI().charJump();
+										cx = currentMovePoint.xEnd;
+										statusMe = 10;
+										cvy = -5;
+										cvx = 0;
+										Res.outz("Jum lun");
+									}
+								}
+								else
+								{
+									SoundMn.gI().charJump();
+									cx = currentMovePoint.xEnd;
+									statusMe = 10;
+									cvy = -5;
+									cvx = 0;
+								}
+							}
+							if (cdir == 1)
+							{
+								if (TileMap.tileTypeAt(cx + chw, cy - chh, 4))
+								{
+									cvx = cspeed * cdir;
+									statusMe = 10;
+									cvy = -5;
+								}
+							}
+							else if (TileMap.tileTypeAt(cx - chw - 1, cy - chh, 8))
+							{
+								cvx = cspeed * cdir;
+								statusMe = 10;
+								cvy = -5;
+							}
+						}
+						else
+						{
+							if (currentMovePoint.yEnd < cy + 10)
+							{
+								statusMe = 10;
+								cvy = -5;
+								if (abs(cy - currentMovePoint.yEnd) <= 10)
+								{
+									cy = currentMovePoint.yEnd;
+									cvy = 0;
+								}
+								if (abs(cx - currentMovePoint.xEnd) <= 10)
+								{
+									cvx = 0;
+								}
+								else
+								{
+									cvx = cspeed * cdir;
+								}
+							}
+							else if (TileMap.tileTypeAt(cx, cy, 2))
+							{
+								currentMovePoint = null;
+								GameScr.instance.clickMoving = false;
+								statusMe = 1;
+								cvx = (cvy = 0);
+								checkPerformEndMovePointAction();
+							}
+							else
+							{
+								if (statusMe == 10 || statusMe == 2)
+								{
+									cvy = 0;
+								}
+								statusMe = 4;
+							}
+							if (currentMovePoint.yEnd > cy)
+							{
+								if (cdir == 1)
+								{
+									if (TileMap.tileTypeAt(cx + chw, cy - chh, 4))
+									{
+										cvx = (cvy = 0);
+										statusMe = 4;
+										currentMovePoint = null;
+										GameScr.instance.clickMoving = false;
+										checkPerformEndMovePointAction();
+									}
+								}
+								else if (TileMap.tileTypeAt(cx - chw - 1, cy - chh, 8))
+								{
+									cvx = (cvy = 0);
+									statusMe = 4;
+									currentMovePoint = null;
+									GameScr.instance.clickMoving = false;
+									checkPerformEndMovePointAction();
+								}
+							}
+						}
+					}
+				}
+				searchFocus();
+			}
+			else
+			{
+				checkHideCharName();
+				if (statusMe == 1 || statusMe == 6)
+				{
+					bool flag4 = false;
+					if (currentMovePoint != null)
+					{
+						if (abs(currentMovePoint.xEnd - cx) < 17 && abs(currentMovePoint.yEnd - cy) < 25)
+						{
+							cx = currentMovePoint.xEnd;
+							cy = currentMovePoint.yEnd;
+							currentMovePoint = null;
+							if ((TileMap.tileTypeAtPixel(cx, cy) & 2) == 2)
+							{
+								statusMe = 1;
+								cp3 = 0;
+								GameCanvas.gI().startDust(-1, cx - -8, cy);
+								GameCanvas.gI().startDust(1, cx - 8, cy);
+							}
+							else
+							{
+								statusMe = 4;
+								cvy = 0;
+								cp1 = 0;
+							}
+							flag4 = true;
+						}
+						else if ((statusBeforeNothing == 10 || cf == 8) && vMovePoints.size() > 0)
+						{
+							flag4 = true;
+						}
+						else if (cy == currentMovePoint.yEnd)
+						{
+							if (cx != currentMovePoint.xEnd)
+							{
+								cx = (cx + currentMovePoint.xEnd) / 2;
+								cf = GameCanvas.gameTick % 5 + 2;
+							}
+						}
+						else if (cy < currentMovePoint.yEnd)
+						{
+							cf = 12;
+							cx = (cx + currentMovePoint.xEnd) / 2;
+							if (cvy < 0)
+							{
+								cvy = 0;
+							}
+							cy += cvy;
+							if ((TileMap.tileTypeAtPixel(cx, cy) & 2) == 2)
+							{
+								GameCanvas.gI().startDust(-1, cx - -8, cy);
+								GameCanvas.gI().startDust(1, cx - 8, cy);
+							}
+							cvy++;
+							if (cvy > 16)
+							{
+								cy = (cy + currentMovePoint.yEnd) / 2;
+							}
+						}
+						else
+						{
+							cf = 7;
+							cx = (cx + currentMovePoint.xEnd) / 2;
+							cy = (cy + currentMovePoint.yEnd) / 2;
+						}
+					}
+					else
+					{
+						flag4 = true;
+					}
+					if (flag4 && vMovePoints.size() > 0)
+					{
+						currentMovePoint = (MovePoint)vMovePoints.firstElement();
+						vMovePoints.removeElementAt(0);
+						if (currentMovePoint.status == 2)
+						{
+							if ((TileMap.tileTypeAtPixel(cx, cy + 12) & 2) != 2)
+							{
+								statusMe = 10;
+								cp1 = 0;
+								cp2 = 0;
+								cvx = -(cx - currentMovePoint.xEnd) / 10;
+								cvy = -(cy - currentMovePoint.yEnd) / 10;
+								if (cx - currentMovePoint.xEnd > 0)
+								{
+									cdir = -1;
+								}
+								else if (cx - currentMovePoint.xEnd < 0)
+								{
+									cdir = 1;
+								}
+							}
+							else
+							{
+								statusMe = 2;
+								if (cx - currentMovePoint.xEnd > 0)
+								{
+									cdir = -1;
+								}
+								else if (cx - currentMovePoint.xEnd < 0)
+								{
+									cdir = 1;
+								}
+								cvx = cspeed * cdir;
+								cvy = 0;
+							}
+						}
+						else if (currentMovePoint.status == 3)
+						{
+							if ((TileMap.tileTypeAtPixel(cx, cy + 23) & 2) != 2)
+							{
+								statusMe = 10;
+								cp1 = 0;
+								cp2 = 0;
+								cvx = -(cx - currentMovePoint.xEnd) / 10;
+								cvy = -(cy - currentMovePoint.yEnd) / 10;
+								if (cx - currentMovePoint.xEnd > 0)
+								{
+									cdir = -1;
+								}
+								else if (cx - currentMovePoint.xEnd < 0)
+								{
+									cdir = 1;
+								}
+							}
+							else
+							{
+								statusMe = 3;
+								GameCanvas.gI().startDust(-1, cx - -8, cy);
+								GameCanvas.gI().startDust(1, cx - 8, cy);
+								if (cx - currentMovePoint.xEnd > 0)
+								{
+									cdir = -1;
+								}
+								else if (cx - currentMovePoint.xEnd < 0)
+								{
+									cdir = 1;
+								}
+								cvx = abs(cx - currentMovePoint.xEnd) / 10 * cdir;
+								cvy = -10;
+							}
+						}
+						else if (currentMovePoint.status == 4)
+						{
+							statusMe = 4;
+							if (cx - currentMovePoint.xEnd > 0)
+							{
+								cdir = -1;
+							}
+							else if (cx - currentMovePoint.xEnd < 0)
+							{
+								cdir = 1;
+							}
+							cvx = abs(cx - currentMovePoint.xEnd) / 9 * cdir;
+							cvy = 0;
+						}
+						else
+						{
+							cx = currentMovePoint.xEnd;
+							cy = currentMovePoint.yEnd;
+							currentMovePoint = null;
+						}
+					}
+				}
+			}
+			switch (statusMe)
+			{
+			case 1:
+				updateCharStand();
+				break;
+			case 2:
+				updateCharRun();
+				break;
+			case 3:
+				updateCharJump();
+				break;
+			case 4:
+				updateCharFall();
+				break;
+			case 5:
+				updateCharDeadFly();
+				break;
+			case 16:
+				updateResetPoint();
+				break;
+			case 9:
+				updateCharAutoJump();
+				break;
+			case 10:
+				updateCharFly();
+				break;
+			case 12:
+				updateSkillStand();
+				break;
+			case 13:
+				updateSkillFall();
+				break;
+			case 14:
+				cp1++;
+				if (cp1 > 30)
+				{
+					cp1 = 0;
+				}
+				if (cp1 % 15 < 5)
+				{
+					cf = 0;
+				}
+				else
+				{
+					cf = 1;
+				}
+				break;
+			case 6:
+				if (isInjure <= 0)
+				{
+					cf = 0;
+				}
+				else if (statusBeforeNothing == 10)
+				{
+					cx += cvx;
+				}
+				else if (cf <= 1)
+				{
+					cp1++;
+					if (cp1 > 6)
+					{
+						cf = 0;
+					}
+					else
+					{
+						cf = 1;
+					}
+					if (cp1 > 10)
+					{
+						cp1 = 0;
+					}
+				}
+				if (cf != 7 && cf != 12 && (TileMap.tileTypeAtPixel(cx, cy + 1) & 2) != 2)
+				{
+					cvx = 0;
+					cvy = 0;
+					statusMe = 4;
+					cf = 7;
+				}
+				if (me)
+				{
+					break;
+				}
+				cp3++;
+				if (cp3 > 10)
+				{
+					if ((TileMap.tileTypeAtPixel(cx, cy + 1) & 2) != 2)
+					{
+						cy += 5;
+					}
+					else
+					{
+						cf = 0;
+					}
+				}
+				if (cp3 > 50)
+				{
+					cp3 = 0;
+					currentMovePoint = null;
+				}
+				break;
+			}
+			if (isInjure > 0)
+			{
+				cf = 23;
+				isInjure = (sbyte)(isInjure - 1);
+			}
+			if (wdx != 0 || wdy != 0)
+			{
+				startDie(wdx, wdy);
+				wdx = 0;
+				wdy = 0;
+			}
+			if (moveFast != null)
+			{
+				if (moveFast[0] == 0)
+				{
+					moveFast[0]++;
+					ServerEffect.addServerEffect(60, this, 1);
+				}
+				else if (moveFast[0] < 10)
+				{
+					moveFast[0]++;
+				}
+				else
+				{
+					cx = moveFast[1];
+					cy = moveFast[2];
+					moveFast = null;
+					ServerEffect.addServerEffect(60, this, 1);
+					if (me)
+					{
+						if ((TileMap.tileTypeAtPixel(cx, cy) & 2) != 2)
+						{
+							statusMe = 4;
+							myCharz().setAutoSkillPaint(GameScr.sks[38], 1);
+						}
+						else
+						{
+							Service.gI().charMove();
+							myCharz().setAutoSkillPaint(GameScr.sks[38], 0);
+						}
+					}
+				}
+			}
+			if (statusMe != 10)
+			{
+				fy = 0;
+			}
+			if (isCharge)
+			{
+				cf = 17;
+				if (GameCanvas.gameTick % 4 == 0)
+				{
+					ServerEffect.addServerEffect(1, cx, cy + GameCanvas.transY, 1);
+				}
+				if (me)
+				{
+					long num6 = mSystem.currentTimeMillis();
+					if (num6 - last >= 1000)
+					{
+						Res.outz("%= " + myskill.damage);
+						last = num6;
+						cHP += cHPFull * myskill.damage / 100;
+						cMP += cMPFull * myskill.damage / 100;
+						if (cHP < cHPFull)
+						{
+							GameScr.startFlyText("+" + cHPFull * myskill.damage / 100 + " " + mResources.HP, cx, cy - ch - 20, 0, -1, mFont.HP);
+						}
+						if (cMP < cMPFull)
+						{
+							GameScr.startFlyText("+" + cMPFull * myskill.damage / 100 + " " + mResources.KI, cx, cy - ch - 20, 0, -2, mFont.MP);
+						}
+						Service.gI().skill_not_focus(2);
+					}
+				}
+			}
+			if (isFlyUp)
+			{
+				if (me)
+				{
+					isLockKey = true;
+					statusMe = 3;
+					cvy = -8;
+					if (cy <= TileMap.pxh - 240)
+					{
+						isFlyUp = false;
+						isLockKey = false;
+						statusMe = 4;
+					}
+				}
+				else
+				{
+					statusMe = 3;
+					cvy = -8;
+					if (cy <= TileMap.pxh - 240)
+					{
+						cvy = 0;
+						isFlyUp = false;
+						cvy = 0;
+						statusMe = 1;
+					}
+				}
+			}
+			updateMount();
+			updEffChar();
+			updateEye();
+			updateFHead();
+		}
+	}

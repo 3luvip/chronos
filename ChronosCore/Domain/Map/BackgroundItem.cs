@@ -5,11 +5,16 @@ namespace Chronos.Core.Domain.Map;
 
 public sealed class BackgroundItem
 {
-    public int Id;
-    public int ImageId;
-    public int WorldX, WorldY, OffsetX, OffsetY;
-    public int Transform;
-    public int Layer;
+    public int   Id;
+    public int   ImageId;
+    public int   WorldX, WorldY, OffsetX, OffsetY;
+    public int   Transform;
+    public int   Layer;
+    /// <summary>
+    /// Uniform scale applied when drawing. 1.0 = native size (default).
+    /// 0.5 = half size, 2.0 = double size.
+    /// </summary>
+    public float Scale = 1.0f;
 
     private static readonly HashSet<int> MiniBgIds =
         [79, 80, 81, 85, 86, 90, 91, 92, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108];

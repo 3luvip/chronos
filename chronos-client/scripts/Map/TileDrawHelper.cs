@@ -130,6 +130,22 @@ namespace Map
         }
 
         /// <summary>
+        /// Draws a decoration texture scaled uniformly around its top-left corner.
+        /// Scale 1.0 = native size, 0.5 = half, 2.0 = double.
+        /// </summary>
+        public static void DrawDecorationTextureScaled(CanvasItem canvas, Texture2D texture,
+                                                       int screenX, int screenY, float scale)
+        {
+            if (texture == null) return;
+            if (scale == 1.0f) { DrawDecorationTexture(canvas, texture, screenX, screenY); return; }
+
+            int dstW = (int)(texture.GetWidth()  * scale);
+            int dstH = (int)(texture.GetHeight() * scale);
+            var destRect = new Rect2(screenX, screenY, dstW, dstH);
+            canvas.DrawTextureRect(texture, destRect, tile: false);
+        }
+
+        /// <summary>
         /// Draws a decoration texture horizontally flipped, at its native size.
         /// Implements the flip by applying a negative-X scale transform,
         /// then restoring the identity transform after drawing.
@@ -145,6 +161,27 @@ namespace Map
             // Negative X scale flips; offset by textureWidth so pivot is the left edge.
             canvas.DrawSetTransformMatrix(
                 new Transform2D(-1, 0, 0, 1, screenX + textureWidth, screenY));
+            canvas.DrawTexture(texture, Vector2.Zero);
+            canvas.DrawSetTransformMatrix(Transform2D.Identity);
+        }
+
+        /// <summary>
+        /// Draws a decoration texture horizontally flipped and scaled.
+        /// </summary>
+        public static void DrawDecorationTextureFlippedHorizontalScaled(CanvasItem canvas,
+                                                                         Texture2D texture,
+                                                                         int screenX, int screenY,
+                                                                         float scale)
+        {
+            if (texture == null) return;
+            if (scale == 1.0f) { DrawDecorationTextureFlippedHorizontal(canvas, texture, screenX, screenY); return; }
+
+            int dstW = (int)(texture.GetWidth()  * scale);
+            int dstH = (int)(texture.GetHeight() * scale);
+
+            // Flip around the scaled width
+            canvas.DrawSetTransformMatrix(
+                new Transform2D(-scale, 0, 0, scale, screenX + dstW, screenY));
             canvas.DrawTexture(texture, Vector2.Zero);
             canvas.DrawSetTransformMatrix(Transform2D.Identity);
         }

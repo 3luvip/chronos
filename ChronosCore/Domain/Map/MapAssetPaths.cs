@@ -12,17 +12,24 @@ public sealed class MapAssetPaths
         BasePath = NormalizePath(basePath);
     }
 
-    public string TileSpritesheetPath(int tileSetId)              => $"{BasePath}t/{tileSetId}.png";
-    public string TileSubdirectoryFramePath(int tileSetId, int i) => $"{BasePath}t/{tileSetId}/t_{i:D2}.png";
-    public string TileDirectFramePath(int frameId)                => $"{BasePath}t/{frameId}.png";
-    public string BackgroundItemPath(int imageId)                 => $"{BasePath}mapBackGround/{imageId}.png";
-    public string WaterfallTexturePath()                          => $"{BasePath}tWater/wtf.png";
-    public string TopWaterfallTexturePath()                       => $"{BasePath}tWater/twtf.png";
-    public string WaterflowTexturePath()                          => $"{BasePath}tWater/wts.png";
-    public string WaterflowVariantNPath()                         => $"{BasePath}tWater/wtsN.png";
-    public string WaterflowVariantN2Path()                        => $"{BasePath}tWater/wtsN2.png";
-    public string ShadowTexturePath()                             => $"{BasePath}mainImage/shadowBig.png";
-    public string LightOverlayTexturePath()                       => $"{BasePath}bg/light.png";
+    // ── Tile assets ───────────────────────────────────────────────────────────
+    public string TileSpritesheetPath(int tileSetId)              => $"{BasePath}asset/tileset/{tileSetId}.png";
+    public string TileSubdirectoryFramePath(int tileSetId, int i) => $"{BasePath}asset/tileset/{tileSetId}/t_{i:D2}.png";
+    public string TileDirectFramePath(int frameId)                => $"{BasePath}asset/tileset/{frameId}.png";
+
+    // ── Background decoration items ───────────────────────────────────────────
+    public string BackgroundItemPath(int imageId)                 => $"{BasePath}asset/mapBackground/{imageId}.png";
+
+    // ── Water textures ────────────────────────────────────────────────────────
+    public string WaterfallTexturePath()                          => $"{BasePath}asset/tWater/wtf.png";
+    public string TopWaterfallTexturePath()                       => $"{BasePath}asset/tWater/twtf.png";
+    public string WaterflowTexturePath()                          => $"{BasePath}asset/tWater/wts.png";
+    public string WaterflowVariantNPath()                         => $"{BasePath}asset/tWater/wtsN.png";
+    public string WaterflowVariantN2Path()                        => $"{BasePath}asset/tWater/wtsN2.png";
+
+    // ── Misc ──────────────────────────────────────────────────────────────────
+    public string ShadowTexturePath()                             => $"{BasePath}asset/mainImage/shadowBig.png";
+    public string LightOverlayTexturePath()                       => $"{BasePath}asset/bg/light.png";
 
     private static string NormalizePath(string p)
     {
